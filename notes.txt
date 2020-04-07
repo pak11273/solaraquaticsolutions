@@ -1,0 +1,2 @@
+// Surge Deployment
+Surge provides a feature that allows you to route all direct page links to a 200.html page. You can add custom text to alert the user about how to get the main page. But that is not UX worthy. So the best option is after you run npm run build . You go to build folder and rename index.html to 200.html , then deploy. And now all direct links will actually work as it did on your development server.

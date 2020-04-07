@@ -1,0 +1,1 @@
+**Translation -- Send photo of the meeting with officials of La Oroya, I am sending separately by the weight of the photos and so there is no confusion of each place.

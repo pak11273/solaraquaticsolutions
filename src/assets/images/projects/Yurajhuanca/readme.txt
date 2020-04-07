@@ -1,0 +1,1 @@
+**Translation -- Sending photos of the area where the water samples were taken in Pasco, the place is called Yurajhuanca, the river is named Ragra, at this point effluents from different mining companies converge, at the end a photo on the spot with government officials Regional of Pasco.

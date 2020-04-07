@@ -1,0 +1,20 @@
+1) use this website to create favicons:
+
+http://www.xiconeditor.com/
+
+
+2) You can just run the following command to clear the icon cache:
+
+	1. open windows explorer and type: run
+
+	2. then paste this: ie4uinit.exe -ClearIconCache
+
+	3. For Windows 10, use: ie4uinit.exe -show
+
+3) Clear google favicon cache:
+
+	1. windows explorer > organize > folder and search options > view > show hidden files, folders, and drives
+	
+	2. goto: C:/Users/isaac/AppData/Local/Google/Chrome/User Data/Default
+
+	3. delete the Favicon and Favicon.journal files

@@ -1,0 +1,1 @@
+**Translation -- I send photos of Junin, of the place and with the officials of the Provincial Municipality of Junin.
