@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/solaraquaticsolutions/static/css/main.d1b05096.chunk.css",
-    "main.js": "/solaraquaticsolutions/static/js/main.de812494.chunk.js",
-    "main.js.map": "/solaraquaticsolutions/static/js/main.de812494.chunk.js.map",
-    "runtime-main.js": "/solaraquaticsolutions/static/js/runtime-main.79266a33.js",
-    "runtime-main.js.map": "/solaraquaticsolutions/static/js/runtime-main.79266a33.js.map",
-    "static/js/2.4e335426.chunk.js": "/solaraquaticsolutions/static/js/2.4e335426.chunk.js",
-    "static/js/2.4e335426.chunk.js.map": "/solaraquaticsolutions/static/js/2.4e335426.chunk.js.map",
+    "main.css": "/solaraquaticsolutions/static/css/main.7f97bfa0.chunk.css",
+    "main.js": "/solaraquaticsolutions/static/js/main.45c016a1.chunk.js",
+    "main.js.map": "/solaraquaticsolutions/static/js/main.45c016a1.chunk.js.map",
+    "runtime-main.js": "/solaraquaticsolutions/static/js/runtime-main.bee297db.js",
+    "runtime-main.js.map": "/solaraquaticsolutions/static/js/runtime-main.bee297db.js.map",
+    "static/js/2.c1102a78.chunk.js": "/solaraquaticsolutions/static/js/2.c1102a78.chunk.js",
+    "static/js/2.c1102a78.chunk.js.map": "/solaraquaticsolutions/static/js/2.c1102a78.chunk.js.map",
     "index.html": "/solaraquaticsolutions/index.html",
-    "precache-manifest.7624911989623df00a0e58dd2a689c90.js": "/solaraquaticsolutions/precache-manifest.7624911989623df00a0e58dd2a689c90.js",
+    "precache-manifest.89f10975fef614d9655d19c7b1f84703.js": "/solaraquaticsolutions/precache-manifest.89f10975fef614d9655d19c7b1f84703.js",
     "service-worker.js": "/solaraquaticsolutions/service-worker.js",
-    "static/css/main.d1b05096.chunk.css.map": "/solaraquaticsolutions/static/css/main.d1b05096.chunk.css.map",
-    "static/js/2.4e335426.chunk.js.LICENSE.txt": "/solaraquaticsolutions/static/js/2.4e335426.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/solaraquaticsolutions/static/media/logo.5d5d9eef.svg"
+    "static/css/main.7f97bfa0.chunk.css.map": "/solaraquaticsolutions/static/css/main.7f97bfa0.chunk.css.map",
+    "static/js/2.c1102a78.chunk.js.LICENSE.txt": "/solaraquaticsolutions/static/js/2.c1102a78.chunk.js.LICENSE.txt",
+    "static/media/048.jpg": "/solaraquaticsolutions/static/media/048.21bb9bc2.jpg",
+    "static/media/logo-v3.svg": "/solaraquaticsolutions/static/media/logo-v3.f5687e84.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.79266a33.js",
-    "static/js/2.4e335426.chunk.js",
-    "static/css/main.d1b05096.chunk.css",
-    "static/js/main.de812494.chunk.js"
+    "static/js/runtime-main.bee297db.js",
+    "static/js/2.c1102a78.chunk.js",
+    "static/css/main.7f97bfa0.chunk.css",
+    "static/js/main.45c016a1.chunk.js"
   ]
 }
