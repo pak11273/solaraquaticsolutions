@@ -1,18 +1,20 @@
-import React, { Component } from "react"
-import { Helmet } from "react-helmet"
-
-import Wrapper from "../components/Wrapper"
 import {
   Box,
-  Column,
   CTA,
+  Column,
   Img,
   Spacer,
   Subtitle,
   Text,
-  Title
+  Title,
 } from "../components"
 import { CTAForm, Masthead, Section } from "../containers"
+import React, { Component } from "react"
+import styled, { withTheme } from "styled-components"
+
+import { Helmet } from "react-helmet"
+import Pin from "../assets/images/pin.png"
+import Wrapper from "../components/Wrapper"
 
 class Home extends Component {
   componentDidMount() {
@@ -26,7 +28,8 @@ class Home extends Component {
     // remove event listener
   }
 
-  render(props) {
+  render() {
+    console.log("border: ", this.props.theme.colors.red[500])
     return (
       <Wrapper>
         <Helmet>
@@ -96,21 +99,29 @@ class Home extends Component {
         </Masthead>
         <Section
           height="1550px"
-          height768="850px"
+          height768="1100px"
           style={{ justifyContent: "center" }}
         >
           <Column maxwidth="960px">
             <Title
-              fontsize="2.5rem"
+              fontsize="3.5rem"
               fontsize768="3rem"
               padding="1rem"
               textalign="center"
             >
-              Our greatest resource for life is facing many threats today.{" "}
+              Life's greatest resource
             </Title>
+            <img
+              src={Pin}
+              width="100px"
+              style={{ margin: "0 auto", padding: "5px" }}
+            />
+            <Subtitle margin="10px 0 0 0">
+              Water faces several threats today
+            </Subtitle>
           </Column>
           <Column
-            alignitems="baseline"
+            justifycontent="center"
             flexdirection768="row"
             margin768="50px 0"
             margin="0"
@@ -119,18 +130,21 @@ class Home extends Component {
             <Box margin="0 0 30px 0">
               <Img
                 background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509767627/home/global_warming_optimized.jpg') center/cover no-repeat"
-                border="2px solid #55657e"
                 borderradius="50%"
-                height="300px"
-                width="300px"
+                bordercolor={`${this.props.theme.colors.red[400]}`}
+                borderwidth="4px"
+                height="200px"
+                width="200px"
                 height768="250px"
                 width768="250px"
               />
               <Text
-                fontsize="1.5rem"
-                color="#55657e"
+                fontsize="1rem"
+                color={`${this.props.theme.colors.red[400]}`}
+                fontweight="800"
                 padding="1rem"
                 textalign="center"
+                texttransform="uppercase"
               >
                 Global Warming
               </Text>
@@ -138,18 +152,21 @@ class Home extends Component {
             <Box>
               <Img
                 background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509768406/home/drought-progressive.jpg') center/cover no-repeat"
-                border="2px solid #55657e"
                 borderradius="50%"
-                height="300px"
-                width="300px"
+                bordercolor={`${this.props.theme.colors.red[500]}`}
+                borderwidth="4px"
+                height="200px"
+                width="200px"
                 height768="250px"
                 width768="250px"
               />
               <Text
-                fontsize="1.5rem"
-                color="#55657e"
+                fontsize="1rem"
+                color={`${this.props.theme.colors.red[400]}`}
+                fontweight="800"
                 padding="1rem"
                 textalign="center"
+                texttransform="uppercase"
               >
                 Diminishing Water Supply
               </Text>
@@ -157,27 +174,35 @@ class Home extends Component {
             <Box>
               <Img
                 background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509768479/home/polluted_water1-progressive.jpg') center/cover no-repeat"
-                border="2px solid #55657e"
                 borderradius="50%"
-                height="300px"
-                width="300px"
+                bordercolor={`${this.props.theme.colors.red[500]}`}
+                borderwidth="4px"
+                height="200px"
+                width="200px"
                 height768="250px"
                 width768="250px"
               />
               <Text
-                fontsize="1.5rem"
-                color="#55657e"
+                fontsize="1rem"
+                color={`${this.props.theme.colors.red[400]}`}
+                fontweight="800"
                 padding="1rem"
                 textalign="center"
+                texttransform="uppercase"
               >
                 Pollution
               </Text>
             </Box>
           </Column>
           <Column maxwidth="960px">
-            <Text color="#55657e" fontsize="2rem">
-              We need a cost effective solution to provide safe, clean drinking
-              water.
+            <Text fontsize="2rem" textalign="center">
+              Our resouces for{" "}
+              <span
+                style={{ color: `${this.props.theme.colors.primary[500]}` }}
+              >
+                clean water
+              </span>{" "}
+              are <span>depleting</span>
             </Text>
           </Column>
         </Section>
@@ -348,7 +373,7 @@ class Home extends Component {
                   <sup
                     style={{
                       verticalAlign: "super",
-                      fontSize: "2rem"
+                      fontSize: "2rem",
                     }}
                   >
                     2
@@ -490,4 +515,4 @@ class Home extends Component {
   }
 }
 
-export default Home
+export default withTheme(Home)

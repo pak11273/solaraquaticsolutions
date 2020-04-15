@@ -1,19 +1,20 @@
+import { Link, NavLink } from "react-router-dom"
 import React, { Component } from "react"
+import styled, { withTheme } from "styled-components"
+
+import Graphic from "../../../assets/images/logo-v3.svg"
+import Hamburger from "../../../components/Buttons/Hamburger"
+import Logo from "../../../components/Logos/Logo.js"
 import { bindActionCreators } from "redux"
 import { connect } from "react-redux"
-import { NavLink, Link } from "react-router-dom"
-import Logo from "../../../components/Logos/Logo.js"
-import Graphic from "../../../assets/images/logo-v3.svg"
-import styled, { withTheme } from "styled-components"
-import Hamburger from "../../../components/Buttons/Hamburger"
+import { toggleDropdown } from "./actions.js"
 
 // actions
-import { toggleDropdown } from "./actions.js"
 
 const NavMenu = styled.nav`
   align-items: center;
-  font-family: ${props => props.theme.colors.primaryFont};
-  background-color: ${props => props.theme.colors.white};
+  font-family: ${(props) => props.theme.colors.primaryFont};
+  background-color: ${(props) => props.theme.colors.white};
   -webkit-box-align: center;
   -webkit-box-pack: end;
   box-sizing: border-box;
@@ -29,10 +30,10 @@ const NavMenu = styled.nav`
   li {
     a {
       &:hover {
-        color: ${props => props.theme.colors.secondaryColor};
+        color: ${(props) => props.theme.colors.secondary};
       }
       &:visited {
-        color: ${props => props.theme.colors.primaryColor};
+        color: ${(props) => props.theme.colors.primary[500]};
       }
     }
   }
@@ -49,7 +50,7 @@ const Menu = styled.ul`
   display: none;
   li {
     display: inline;
-    font-family: ${props => props.theme.primaryFont};
+    font-family: ${(props) => props.theme.primaryFont};
     font-size: 1rem;
     margin-left: 4rem;
   }
@@ -59,14 +60,14 @@ const Menu = styled.ul`
   }
 
   li a:visited {
-    color: ${props => props.theme.colors.primaryColor};
+    color: ${(props) => props.theme.colors.primary};
     font-size: 1rem;
     &:hover {
-      color: ${props => props.theme.colors.secondaryColor};
+      color: ${(props) => props.theme.colors.secondary};
     }
   }
 
-  width: ${props => props.width};
+  width: ${(props) => props.width};
 
   @media (min-width: 768px) {
     display: flex;
@@ -74,28 +75,28 @@ const Menu = styled.ul`
 `
 
 Menu.defaultProps = {
-  width: "490px"
+  width: "490px",
 }
 
 const ResponsiveMenu = styled.div`
   display: none;
-  border-top: 1px solid ${props => props.theme.colors.primaryColor};
+  border-top: 1px solid ${(props) => props.theme.colors.primary};
   margin-top: 80px;
   text-transform: uppercase;
   width: 100%;
 
   li {
-    font-family: ${props => props.theme.primaryFont};
+    font-family: ${(props) => props.theme.primaryFont};
     padding: 1rem 1rem 1rem 0;
-    border-bottom: 1px solid ${props => props.theme.colors.primaryColor};
+    border-bottom: 1px solid ${(props) => props.theme.colors.primary};
   }
 
   li a {
     padding-left: 1rem;
-    color: ${props => props.theme.colors.primaryColor};
+    color: ${(props) => props.theme.colors.primary};
     font-size: 1rem;
     &:hover {
-      color: ${props => props.theme.colors.secondaryColor};
+      color: ${(props) => props.theme.colors.secondary};
     }
   }
 
@@ -104,12 +105,12 @@ const ResponsiveMenu = styled.div`
   }
 `
 ResponsiveMenu.defaultProps = {
-  color: "black"
+  color: "black",
 }
 
 const MyLink = styled(NavLink)`
   &.active {
-    background: props.theme.colors.primaryColor;
+    background: props.theme.colors.primary;
   }
 `
 
@@ -186,7 +187,7 @@ class Navbar extends Component {
             position: "absolute",
             textAlign: "right",
             top: "20px",
-            width: "120px"
+            width: "120px",
           }}
         >
           <TopDropItem
@@ -195,7 +196,7 @@ class Navbar extends Component {
               borderTop: "1px solid blue",
               borderLeft: "1px solid blue",
               borderRight: "1px solid blue",
-              padding: "10px 10px 5px 0 "
+              padding: "10px 10px 5px 0 ",
             }}
             onClick={this.handleDropClick}
           >
@@ -206,7 +207,7 @@ class Navbar extends Component {
             style={{
               borderLeft: "1px solid blue",
               borderRight: "1px solid blue",
-              padding: "10px 10px 10px 0 "
+              padding: "10px 10px 10px 0 ",
             }}
             onClick={this.handleDropClick}
           >
@@ -217,7 +218,7 @@ class Navbar extends Component {
             style={{
               borderLeft: "1px solid blue",
               borderRight: "1px solid blue",
-              padding: "10px 10px 10px 0 "
+              padding: "10px 10px 10px 0 ",
             }}
             onClick={this.handleDropClick}
           >
@@ -230,7 +231,7 @@ class Navbar extends Component {
               borderRight: "1px solid blue",
               borderBottom: "1px solid blue",
               borderRadius: "0 0 5px 5px",
-              padding: "10px 10px 10px 0 "
+              padding: "10px 10px 10px 0 ",
             }}
             onClick={this.handleDropClick}
           >
@@ -260,9 +261,9 @@ class Navbar extends Component {
                     <MyLink
                       exact
                       activeStyle={{
-                        background: this.props.theme.colors.primaryColor,
+                        background: this.props.theme.colors.primary,
                         padding: "10px",
-                        color: this.props.theme.colors.white
+                        color: this.props.theme.colors.white,
                       }}
                       onClick={this.handleNavClick}
                       to={"/" + item}
@@ -285,10 +286,10 @@ class Navbar extends Component {
                 to="/"
                 exact
                 activeStyle={{
-                  background: this.props.theme.colors.primaryColor,
+                  background: this.props.theme.colors.primary,
                   padding: "1rem",
                   paddingRight: "100%",
-                  color: this.props.theme.colors.white
+                  color: this.props.theme.colors.white,
                 }}
               >
                 home
@@ -300,10 +301,10 @@ class Navbar extends Component {
                   <MyLink
                     exact
                     activeStyle={{
-                      background: this.props.theme.colors.primaryColor,
+                      background: this.props.theme.colors.primary,
                       padding: "1rem",
                       paddingRight: "100%",
-                      color: this.props.theme.colors.white
+                      color: this.props.theme.colors.white,
                     }}
                     to={"/" + item}
                   >
@@ -319,23 +320,23 @@ class Navbar extends Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
-    navReducer: state.navReducer
+    navReducer: state.navReducer,
   }
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
     actions: bindActionCreators(
       {
-        toggleDropdown
+        toggleDropdown,
       },
       dispatch
-    )
+    ),
   }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps, null, {
-  pure: false
+  pure: false,
 })(withTheme(Navbar))

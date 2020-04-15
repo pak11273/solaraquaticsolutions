@@ -7,6 +7,6 @@ export const typography = {
   xxl: "24px",
   xxxl: "30px",
   xxxxl: "36px",
-  primaryFont: "Montserrat",
-  secondaryFont: "Lora"
+  primary: "Montserrat",
+  secondary: "Lora",
 }

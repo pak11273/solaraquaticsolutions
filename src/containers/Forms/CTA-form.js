@@ -1,38 +1,39 @@
 import React, { Component } from "react"
-import styled from "styled-components"
+
 import { NavLink } from "react-router-dom"
+import styled from "styled-components"
 
 const Form = styled.form`
-  align-self: ${props => props.alignself};
-  background: ${props => props.background};
-  border-radius: ${props => props.borderradius};
-  bottom: ${props => props.bottom};
-  color: ${props => props.color};
+  align-self: ${(props) => props.alignself};
+  background: ${(props) => props.background};
+  border-radius: ${(props) => props.borderradius};
+  bottom: ${(props) => props.bottom};
+  color: ${(props) => props.color};
   display: flex;
   flex-direction: column;
-  font-weight: ${props => props.fontweight};
-  height: ${props => props.height};
-  left: ${props => props.left};
-  margin: ${props => props.margin};
-  margin-left: ${props => props.marginleft};
-  min-width: ${props => props.minwidth};
-  padding: ${props => props.padding};
-  position: ${props => props.position};
-  right: ${props => props.right};
-  top: ${props => props.top};
-  width: ${props => props.width};
+  font-weight: ${(props) => props.fontweight};
+  height: ${(props) => props.height};
+  left: ${(props) => props.left};
+  margin: ${(props) => props.margin};
+  margin-left: ${(props) => props.marginleft};
+  min-width: ${(props) => props.minwidth};
+  padding: ${(props) => props.padding};
+  position: ${(props) => props.position};
+  right: ${(props) => props.right};
+  top: ${(props) => props.top};
+  width: ${(props) => props.width};
   -webkit-animation: slide-in-fwd-center 0.8s
     cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-in-fwd-center 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   h6 {
-    background: ${props => props.theme.colors.bg1};
-    color: ${props => props.theme.colors.secondaryColor};
+    background: ${(props) => props.theme.colors.bg1};
+    color: ${(props) => props.theme.colors.secondary};
     padding: 20px 0;
     text-align: center;
   }
   p {
-    font-family: ${props => props.theme.typography.primaryFont};
-    color: ${props => props.theme.colors.bg1};
+    font-family: ${(props) => props.theme.typography.primaryFont};
+    color: ${(props) => props.theme.colors.bg1};
   }
   p:nth-child(1) {
     padding: 20px;
@@ -47,15 +48,15 @@ const Form = styled.form`
     padding: 20px;
   }
   a {
-    color: ${props => props.color};
-    font-size: ${props => props.fontsize};
+    color: ${(props) => props.color};
+    font-size: ${(props) => props.fontsize};
   }
 
   a:visited {
-    color: ${props => props.avisited};
+    color: ${(props) => props.avisited};
   }
   div {
-    background: ${props => props.theme.colors.secondaryColor};
+    background: ${(props) => props.theme.colors.secondary};
     left: 0;
     bottom: 0;
     height: 90px;
@@ -75,12 +76,12 @@ const Form = styled.form`
   }
   div > input {
     border: none;
-    border-top: 1px solid ${props => props.theme.colors.bg1};
+    border-top: 1px solid ${(props) => props.theme.colors.bg1};
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-family: ${props => props.theme.typography.primaryFont};
+    font-family: ${(props) => props.theme.typography.primaryFont};
     font-size: 1.2rem;
     height: 45px;
     width: 300px;
@@ -88,7 +89,7 @@ const Form = styled.form`
   div:nth-child(4) {
     cursor: pointer;
     &:hover {
-      color: ${props => props.theme.bg2};
+      color: ${(props) => props.theme.bg2};
     }
   }
   @-webkit-keyframes slide-in-fwd-center {
@@ -117,16 +118,16 @@ const Form = styled.form`
   }
 `
 Form.defaultProps = {
-  background: props => props.theme.colors.white,
-  color: props => props.theme.colors.primaryColor,
+  background: (props) => props.theme.colors.white,
+  color: (props) => props.theme.colors.primary,
   fontsize: "1.5rem",
   fontweight: "600",
   height: "500px",
   minwidth: "300px",
-  position: "relative"
+  position: "relative",
 }
 
-const CTAForm = props => (
+const CTAForm = (props) => (
   <Form {...props}>
     <h6>Free e-book</h6>
     <p>The Dark Side of Water</p>

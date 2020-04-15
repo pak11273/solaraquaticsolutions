@@ -21,7 +21,6 @@ import { theme } from "./theme"
 // import thunk from "redux-thunk"
 // import { createStore, applyMiddleware } from "redux"
 
-
 // Analytics
 ReactGA.initialize("UA-105517939-1")
 function logPageView() {

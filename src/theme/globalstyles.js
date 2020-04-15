@@ -25,7 +25,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1,h2,h3,h4,h5,h6 {
-   font-family: theme.typography.primaryFont, Arial, sans-serif;
+   font-family: theme.typography.primary[500], Arial, sans-serif;
   }
 
  h1 {
@@ -84,15 +84,15 @@ export const GlobalStyle = createGlobalStyle`
  }
 
  a {
-  color: #ffdf00;
+  color: ${theme.colors.primary[500]};
  }
 
  a:visited {
-  color: ${theme.colors.primaryColor};
+  color: ${theme.colors.primary[500]};
  }
 
  a:hover {
-   color: ${theme.colors.secondaryColor};
+   color: ${theme.colors.secondary};
  }
 
  img {

@@ -2,18 +2,18 @@ import styled from "styled-components"
 
 // color: ${props => props.color};
 const Title = styled.div`
-  color: ${props => props.color};
-  font-size: ${props => props.fontsize};
-  font-weight: ${props => props.fontweight};
-  margin: ${props => props.margin};
-  padding: ${props => props.padding};
-  position: ${props => props.position};
-  text-align: ${props => props.textalign};
-  text-shadow: ${props => props.textshadow};
-  top: ${props => props.top};
-  width: ${props => props.width};
+  color: ${(props) => props.theme.colors.primary[800]};
+  font-size: ${(props) => props.fontsize};
+  font-weight: ${(props) => props.fontweight};
+  margin: ${(props) => props.margin};
+  padding: ${(props) => props.padding};
+  position: ${(props) => props.position};
+  text-align: ${(props) => props.textalign};
+  text-shadow: ${(props) => props.textshadow};
+  top: ${(props) => props.top};
+  width: ${(props) => props.width};
   h1 {
-    color: ${props => props.theme.colors.secondaryColor};
+    color: ${(props) => props.theme.colors.secondary};
     display: block;
     font-size: 4.5rem;
     line-height: 3rem;
@@ -25,7 +25,7 @@ const Title = styled.div`
   }
   h2 {
     font-size: 3.3rem;
-    color: ${props => props.theme.white};
+    color: ${(props) => props.theme.colors.white};
     -webkit-animation: fade-in-right 1s linear both;
     animation: fade-in-right 1s linear both;
     @media (min-width: 768px) {
@@ -34,7 +34,7 @@ const Title = styled.div`
   }
   h3 {
     display: block;
-    color: ${props => props.theme.white};
+    color: ${(props) => props.theme.colors.white};
     line-height: 1rem;
     font-size: 2rem;
   }
@@ -92,7 +92,7 @@ Title.defaultProps = {
   fontsize: "4.5rem",
   fontweight: "600",
   padding: "0 5% 0 5%",
-  width: "100%"
+  width: "100%",
 }
 
 export default Title
