@@ -102,7 +102,7 @@ class Home extends Component {
           height768="1100px"
           style={{ justifyContent: "center" }}
         >
-          <Column maxwidth="960px">
+          <Column maxwidth="1280px">
             <Title
               fontsize="3.5rem"
               fontsize768="3rem"
@@ -125,9 +125,9 @@ class Home extends Component {
             flexdirection768="row"
             margin768="50px 0"
             margin="0"
-            maxwidth="960px"
+            maxwidth="1280px"
           >
-            <Box margin="0 0 30px 0">
+            <Box margin="0 30px 30px 30px">
               <Img
                 background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509767627/home/global_warming_optimized.jpg') center/cover no-repeat"
                 borderradius="50%"
@@ -149,7 +149,7 @@ class Home extends Component {
                 Global Warming
               </Text>
             </Box>
-            <Box margin="0 0 30px 0">
+            <Box margin="0 30px 30px 30px">
               <Img
                 background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509768406/home/drought-progressive.jpg') center/cover no-repeat"
                 borderradius="50%"
@@ -171,7 +171,7 @@ class Home extends Component {
                 Diminishing Water Supply
               </Text>
             </Box>
-            <Box margin="0 0 30px 0">
+            <Box margin="0 30px 30px 30px">
               <Img
                 background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509768479/home/polluted_water1-progressive.jpg') center/cover no-repeat"
                 borderradius="50%"
