@@ -1,19 +1,19 @@
-import React, { Component } from "react"
-import styled, { ThemeProvider } from "styled-components"
-
-import Line from "../../components/Lines/Line.js"
-import Navbar from "../../containers/Navbars/Navbar"
-import Article from "../../containers/Articles/Article.js"
 import {
   Box,
   Column,
-  Wrapper,
   Img,
+  Section,
   Subtitle,
   Text,
-  Title
+  Title,
+  Wrapper,
 } from "../../components"
-import { Section } from "../../containers"
+import React, { Component } from "react"
+import styled, { ThemeProvider } from "styled-components"
+
+import Article from "../../containers/Articles/Article.js"
+import Line from "../../components/Lines/Line.js"
+import Navbar from "../../containers/Navbars/Navbar"
 
 class Cerro extends Component {
   render() {

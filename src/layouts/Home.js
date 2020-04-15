@@ -3,12 +3,13 @@ import {
   CTA,
   Column,
   Img,
+  Section,
   Spacer,
   Subtitle,
   Text,
   Title,
 } from "../components"
-import { CTAForm, Masthead, Section } from "../containers"
+import { CTAForm, Masthead } from "../containers"
 import React, { Component } from "react"
 import styled, { withTheme } from "styled-components"
 
@@ -195,7 +196,7 @@ class Home extends Component {
             </Box>
           </Column>
           <Column maxwidth="960px">
-            <Text fontsize="2rem" textalign="center">
+            <Text fontsize="1.5rem" textalign="center">
               Our resouces for{" "}
               <span
                 style={{ color: `${this.props.theme.colors.primary[500]}` }}
@@ -207,14 +208,17 @@ class Home extends Component {
           </Column>
         </Section>
         <Section
+          backgroundattachment="fixed"
           background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509767776/home/ocean-water-progressive-v2.jpg') center/cover no-repeat"
-          height="600px"
+          height="900px"
+          width="100%"
           style={{ justifyContent: "center" }}
         >
           <Column flexdirection768="row" maxwidth="960px">
             <Column>
               <Title
-                color="#273e63"
+                // color={`${this.props.theme.colors.primary[500]}`}
+                // color="white"
                 fontsize="4rem"
                 fontsize768="7rem"
                 padding="1rem"
@@ -224,13 +228,12 @@ class Home extends Component {
               </Title>
             </Column>
             <Column>
-              <Text color="#55657e" fontsize="2rem">
+              <Text fontsize="2rem" padding="0 0 0 20px">
                 About 71% of the earth's surface is covered with water,
                 however...
               </Text>
               <Title
-                color="white"
-                color768="#273e63"
+                color={`${this.props.theme.colors.primary[200]}`}
                 fontsize="3rem"
                 padding="1rem"
               >

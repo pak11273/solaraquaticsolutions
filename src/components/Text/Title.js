@@ -1,8 +1,10 @@
-import styled from "styled-components"
+import styled, { withTheme } from "styled-components"
+
+import { theme } from "../../theme"
 
 // color: ${props => props.color};
 const Title = styled.div`
-  color: ${(props) => props.theme.colors.primary[800]};
+  color: ${(props) => props.color};
   font-size: ${(props) => props.fontsize};
   font-weight: ${(props) => props.fontweight};
   margin: ${(props) => props.margin};
@@ -89,6 +91,7 @@ const Title = styled.div`
 `
 
 Title.defaultProps = {
+  color: theme.colors.primaryText,
   fontsize: "4.5rem",
   fontweight: "600",
   padding: "0 5% 0 5%",

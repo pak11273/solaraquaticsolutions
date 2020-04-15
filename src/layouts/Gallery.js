@@ -1,48 +1,47 @@
+import { Box, CTA, Column, Section, Subtitle, Text, Title } from "../components"
+import { Line, Wrapper } from "../components"
 import React, { Component } from "react"
-import { Helmet } from "react-helmet"
-import { connect } from "react-redux"
 import styled, { ThemeProvider } from "styled-components"
 
-import { Line, Wrapper } from "../components"
-import Navbar from "../containers/Navbars/Navbar"
 import Article from "../containers/Articles/Article.js"
-import { Box, CTA, Column, Subtitle, Text, Title } from "../components"
-import { Section } from "../containers"
+import { Helmet } from "react-helmet"
+import Navbar from "../containers/Navbars/Navbar"
+import { connect } from "react-redux"
 
 // TODO: revert to /Project link once project is completed
 
 const GalleryImg = styled.div`
-  align-self: ${props => props.alignself};
-  alt: ${props => props.alt};
-  background: ${props => props.background};
-  border: ${props => props.border};
-  border-radius: ${props => props.borderradius};
-  box-shadow: ${props => props.boxshadow};
-  float: ${props => props.float};
-  height: ${props => props.height};
-  position: ${props => props.position};
-  margin: ${props => props.margin};
-  min-height: ${props => props.minheight};
-  max-height: ${props => props.maxheight};
-  top: ${props => props.top};
-  width: ${props => props.width};
+  align-self: ${(props) => props.alignself};
+  alt: ${(props) => props.alt};
+  background: ${(props) => props.background};
+  border: ${(props) => props.border};
+  border-radius: ${(props) => props.borderradius};
+  box-shadow: ${(props) => props.boxshadow};
+  float: ${(props) => props.float};
+  height: ${(props) => props.height};
+  position: ${(props) => props.position};
+  margin: ${(props) => props.margin};
+  min-height: ${(props) => props.minheight};
+  max-height: ${(props) => props.maxheight};
+  top: ${(props) => props.top};
+  width: ${(props) => props.width};
 
   @media (min-width: 768px) {
-    float: ${props => props.float768};
-    height: ${props => props.height768};
-    margin: ${props => props.margin768};
-    min-width: ${props => props.minwidth768};
-    min-height: ${props => props.minheight768};
-    max-height: ${props => props.maxheight768};
-    width: ${props => props.width768};
+    float: ${(props) => props.float768};
+    height: ${(props) => props.height768};
+    margin: ${(props) => props.margin768};
+    min-width: ${(props) => props.minwidth768};
+    min-height: ${(props) => props.minheight768};
+    max-height: ${(props) => props.maxheight768};
+    width: ${(props) => props.width768};
   }
 
   @media (min-width: 960px) {
-    align-self: ${props => props.alignself960};
-    height: ${props => props.height960};
-    min-height: ${props => props.minheight960};
-    max-height: ${props => props.maxheight960};
-    width: ${props => props.width960};
+    align-self: ${(props) => props.alignself960};
+    height: ${(props) => props.height960};
+    min-height: ${(props) => props.minheight960};
+    max-height: ${(props) => props.maxheight960};
+    width: ${(props) => props.width960};
   }
 `
 GalleryImg.defaultProps = {
@@ -54,7 +53,7 @@ GalleryImg.defaultProps = {
   height: "300px",
   minwidth768: "400px",
   border: "40px solid white",
-  boxshadow: "inset 0 0 0 2px #55657e"
+  boxshadow: "inset 0 0 0 2px #55657e",
 }
 
 class Gallery extends Component {

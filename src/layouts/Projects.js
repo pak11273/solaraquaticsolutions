@@ -1,25 +1,26 @@
-import React, { Component } from "react"
-import { Helmet } from "react-helmet"
-import { bindActionCreators } from "redux"
-import { connect } from "react-redux"
-import styled, { ThemeProvider } from "styled-components"
-
-import Navbar from "../containers/Navbars/Navbar"
-import Article from "../containers/Articles/Article.js"
 import {
   Box,
-  Line,
   Column,
-  Wrapper,
   Img,
+  Line,
+  Section,
   Subtitle,
   Text,
-  Title
+  Title,
+  Wrapper,
 } from "../components"
-import { Section } from "../containers"
+import React, { Component } from "react"
+import styled, { ThemeProvider } from "styled-components"
+
+import Article from "../containers/Articles/Article.js"
+import { Helmet } from "react-helmet"
+import Navbar from "../containers/Navbars/Navbar"
+import { bindActionCreators } from "redux"
+import { connect } from "react-redux"
+import { toggleDropdown } from "../containers/Navbars/Navbar/actions.js"
 
 // actions
-import { toggleDropdown } from "../containers/Navbars/Navbar/actions.js"
+
 
 class Projects extends Component {
   componentDidMount() {
@@ -210,20 +211,20 @@ class Projects extends Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
-    navReducer: state.navReducer
+    navReducer: state.navReducer,
   }
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
     actions: bindActionCreators(
       {
-        toggleDropdown
+        toggleDropdown,
       },
       dispatch
-    )
+    ),
   }
 }
 

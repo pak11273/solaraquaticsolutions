@@ -1,22 +1,23 @@
-import React, { Component } from "react"
-import styled, { ThemeProvider } from "styled-components"
-
-import Line from "../../components/Lines/Line.js"
-import Navbar from "../../containers/Navbars/Navbar"
-import Article from "../../containers/Articles/Article.js"
 import {
   Box,
   Column,
-  Wrapper,
   Img,
+  Section,
   Subtitle,
   Text,
-  Title
+  Title,
+  Wrapper,
 } from "../../components"
-import { Section } from "../../containers"
+import React, { Component } from "react"
+import styled, { ThemeProvider } from "styled-components"
+
+import Article from "../../containers/Articles/Article.js"
+import Line from "../../components/Lines/Line.js"
+import Navbar from "../../containers/Navbars/Navbar"
+import OfficialsImg from "../../assets/images/projects/Yurajhuanca/048.jpg"
 
 // images
-import OfficialsImg from "../../assets/images/projects/Yurajhuanca/048.jpg"
+
 
 class Yurajhuanca extends Component {
   render() {

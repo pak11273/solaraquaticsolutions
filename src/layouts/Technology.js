@@ -1,15 +1,24 @@
+import {
+  Box,
+  Column,
+  Img,
+  Section,
+  Subtitle,
+  Text,
+  Title,
+  Wrapper,
+} from "../components"
 import React, { Component } from "react"
-import { Helmet } from "react-helmet"
 import styled, { ThemeProvider } from "styled-components"
 
+import Article from "../containers/Articles/Article.js"
+import { Helmet } from "react-helmet"
 import Line from "../components/Lines/Line.js"
 import Navbar from "../containers/Navbars/Navbar"
-import Article from "../containers/Articles/Article.js"
-import { Box, Column, Wrapper, Img, Subtitle, Text, Title } from "../components"
-import { Section } from "../containers"
+import { toggleDropdown } from "../containers/Navbars/Navbar/actions.js"
 
 // actions
-import { toggleDropdown } from "../containers/Navbars/Navbar/actions.js"
+
 
 class Technology extends Component {
   render() {

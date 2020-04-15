@@ -1,12 +1,19 @@
+import {
+  Box,
+  Column,
+  Img,
+  Section,
+  Subtitle,
+  Text,
+  Title,
+  Wrapper,
+} from "../components"
 import React, { Component } from "react"
 import styled, { ThemeProvider } from "styled-components"
-import { Helmet } from "react-helmet"
 
-import Navbar from "../containers/Navbars/Navbar"
 import Article from "../containers/Articles/Article.js"
-
-import { Section } from "../containers"
-import { Box, Wrapper, Column, Img, Subtitle, Title, Text } from "../components"
+import { Helmet } from "react-helmet"
+import Navbar from "../containers/Navbars/Navbar"
 
 class About extends Component {
   render() {

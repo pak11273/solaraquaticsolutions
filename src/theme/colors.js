@@ -47,7 +47,7 @@ export const colors = {
     90: "rgba(255, 0, 0, 90%)",
     100: "rgba(255, 0, 0, 100%)",
   },
-  primaryText: "#55657e",
+  primaryText: "#577691",
   secondary: "#FFC914",
   bg1: "rgba(21, 158, 255, 1)",
   fg1: "rgba(23, 190, 187, 1)",

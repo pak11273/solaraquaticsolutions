@@ -1,5 +1,5 @@
-import React from "react"
 import styled from "styled-components"
+import { theme } from "src/theme"
 
 const Text = styled.div`
   background: ${(props) => props.background};
@@ -32,8 +32,8 @@ const Text = styled.div`
   }
 `
 Text.defaultProps = {
-  color: (props) => props.theme.color,
-  fontfamily: (props) => props.theme.fontfamily,
+  color: theme.colors.primaryText,
+  fontfamily: theme.typography.primaryFont,
   fontsize: "inherit",
   fontweight: "0",
   padding: "0",

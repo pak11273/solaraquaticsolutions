@@ -1,6 +1,5 @@
-import Masthead from "./Masthead.js"
 import CTAForm from "../containers/Forms/CTA-form"
 import Footer from "../containers/Footers"
-import Section from "../containers/Sections/Section.js"
+import Masthead from "./Masthead.js"
 
-export { CTAForm, Footer, Masthead, Section }
+export { CTAForm, Footer, Masthead }

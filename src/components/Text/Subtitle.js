@@ -20,7 +20,7 @@ const Subtitle = styled.div`
 
 Subtitle.defaultProps = {
   color: (props) => props.theme.colors.primary[600],
-  fontsize: "1.4rem",
+  fontsize: "2rem",
   fontfamily: (props) => props.theme.typography.secondary,
   // fontfamily: "serif",
   fontweight: "bold",

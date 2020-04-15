@@ -1,19 +1,19 @@
+import {
+  Box,
+  Column,
+  Img,
+  Section,
+  Subtitle,
+  Text,
+  Title,
+  Wrapper,
+} from "../../components"
 import React, { Component } from "react"
 import styled, { ThemeProvider } from "styled-components"
 
+import Article from "../../containers/Articles/Article.js"
 import Line from "../../components/Lines/Line.js"
 import Navbar from "../../containers/Navbars/Navbar"
-import Article from "../../containers/Articles/Article.js"
-import {
-  Box,
-  Wrapper,
-  Column,
-  Img,
-  Subtitle,
-  Text,
-  Title
-} from "../../components"
-import { Section } from "../../containers"
 
 class Technology extends Component {
   render() {

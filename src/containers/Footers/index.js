@@ -1,26 +1,26 @@
-import React from "react"
+import { Section, Text } from "../../components"
 import styled, { ThemeProvider } from "styled-components"
-import Img from "../../components/Medias/Img/index.js"
-import Logo from "../../components/Logos/Logo.js"
+
 import Column from "../../components/Columns/Column.js"
 import Graphic from "../../assets/images/logo-v3.svg"
+import Img from "../../components/Medias/Img/index.js"
+import Logo from "../../components/Logos/Logo.js"
 import { NavLink } from "react-router-dom"
-import Section from "../../containers/Sections/Section.js"
-import { Text } from "../../components"
+import React from "react"
 
 // flex-direction: ${props => props.flexdirection};
 // justify-content: ${props => props.justifycontent};
 const Footer = styled.div`
-  background: ${props => props.background};
-  bottom: ${props => props.bottom};
+  background: ${(props) => props.background};
+  bottom: ${(props) => props.bottom};
   box-sizing: border-box;
-  color: ${props => props.color};
-  display: ${props => props.display};
-  flex-direction: ${props => props.flexdirection};
-  height: ${props => props.height};
-  width: ${props => props.width};
-  padding: ${props => props.padding};
-  position: ${props => props.position};
+  color: ${(props) => props.color};
+  display: ${(props) => props.display};
+  flex-direction: ${(props) => props.flexdirection};
+  height: ${(props) => props.height};
+  width: ${(props) => props.width};
+  padding: ${(props) => props.padding};
+  position: ${(props) => props.position};
   h1,
   h2,
   h3,
@@ -34,10 +34,10 @@ const Footer = styled.div`
     color: #4f69cc;
   }
   @media (min-width: 960px) {
-    margin: ${props => props.margin960};
-    width: ${props => props.width960};
-    justify-content: ${props => props.justifycontent960};
-    padding: ${props => props.padding960};
+    margin: ${(props) => props.margin960};
+    width: ${(props) => props.width960};
+    justify-content: ${(props) => props.justifycontent960};
+    padding: ${(props) => props.padding960};
     flex-direction: row;
     h1,
     h2,
@@ -55,11 +55,11 @@ const Footer = styled.div`
 `
 Footer.defaultProps = {
   background: "transparent",
-  color: props => props.theme.color,
+  color: (props) => props.theme.color,
   display: "flex",
   flexdirection: "column",
   justyifycontent: "center",
-  width: "100%"
+  width: "100%",
 }
 
 const Title = styled.div`
@@ -67,7 +67,7 @@ const Title = styled.div`
 `
 
 const Href = styled(NavLink)`
-  cursor: ${props => props.cursor};
+  cursor: ${(props) => props.cursor};
   padding: 0.5rem 0 0 0;
   color: white;
 
@@ -76,10 +76,10 @@ const Href = styled(NavLink)`
   }
 `
 const textColor = {
-  color: "#2196f3"
+  color: "#2196f3",
 }
 
-export default props => (
+export default (props) => (
   <Footer {...props}>
     <Section maxwidth="1024px" flexdirection960="row">
       <Column
