@@ -22,6 +22,7 @@ const Section = styled.section`
   width: ${(props) => props.width};
 
   @media (min-width: 768px) {
+    align-items: ${(props) => props.alignitems768};
     height: ${(props) => props.height768};
     max-width: ${(props) => props.maxwidth768};
   }

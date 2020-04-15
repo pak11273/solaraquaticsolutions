@@ -3,6 +3,7 @@ import {
   CTA,
   Column,
   Img,
+  Pin,
   Section,
   Subtitle,
   Text,
@@ -12,9 +13,10 @@ import { CTAForm, Masthead } from "../containers"
 import React, { Component } from "react"
 
 import { Helmet } from "react-helmet"
-import Pin from "../assets/images/pin.png"
 import Wrapper from "../components/Wrapper"
 import { withTheme } from "styled-components"
+
+// import Pin from "../assets/images/pin.png"
 
 class Home extends Component {
   componentDidMount() {
@@ -59,8 +61,8 @@ class Home extends Component {
           >
             <Box
               justifycontent="flex-start"
-              margin="40px 0 0 20px"
-              margin768="40px 0 0 0"
+              margin="60px 0 0 20px"
+              margin768="60px 0 0 0"
             >
               <Title color="white" padding="0" textalign="left">
                 <h1>SOLAR</h1>
@@ -111,11 +113,7 @@ class Home extends Component {
             >
               Life's greatest resource
             </Title>
-            <img
-              src={Pin}
-              width="100px"
-              style={{ margin: "0 auto", padding: "5px" }}
-            />
+            <Pin />
             <Subtitle margin="10px 0 0 0">
               Water faces several threats today
             </Subtitle>
@@ -263,7 +261,7 @@ class Home extends Component {
               textalign="center"
               width768="300px"
             />
-            <Box width768="50%">
+            <Box width768="50%" alignitems768="flex-start">
               <Title
                 margin="20px 0 0 0"
                 fontsize="2rem"
@@ -278,6 +276,7 @@ class Home extends Component {
               <Title fontsize="2rem" textalign768="left" padding="0">
                 are on the rise
               </Title>
+              <Pin margin="20px 0 0 0" />
               <Text
                 fontsize="1.5rem"
                 textalign="center"

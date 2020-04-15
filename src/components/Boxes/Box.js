@@ -26,6 +26,7 @@ const Container = styled.section`
   z-index: ${(props) => props.zindex};
 
   @media (min-width: 768px) {
+    align-items: ${(props) => props.alignitems768};
     bottom: ${(props) => props.bottom768};
     flex-direction: ${(props) => props.flexdirection768};
     font-size: ${(props) => props.fontsize768};
