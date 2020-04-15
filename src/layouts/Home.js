@@ -149,7 +149,7 @@ class Home extends Component {
                 Global Warming
               </Text>
             </Box>
-            <Box>
+            <Box margin="0 0 30px 0">
               <Img
                 background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509768406/home/drought-progressive.jpg') center/cover no-repeat"
                 borderradius="50%"
@@ -171,7 +171,7 @@ class Home extends Component {
                 Diminishing Water Supply
               </Text>
             </Box>
-            <Box>
+            <Box margin="0 0 30px 0">
               <Img
                 background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509768479/home/polluted_water1-progressive.jpg') center/cover no-repeat"
                 borderradius="50%"
