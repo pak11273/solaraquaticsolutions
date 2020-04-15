@@ -4,18 +4,17 @@ import {
   Column,
   Img,
   Section,
-  Spacer,
   Subtitle,
   Text,
   Title,
 } from "../components"
 import { CTAForm, Masthead } from "../containers"
 import React, { Component } from "react"
-import styled, { withTheme } from "styled-components"
 
 import { Helmet } from "react-helmet"
 import Pin from "../assets/images/pin.png"
 import Wrapper from "../components/Wrapper"
+import { withTheme } from "styled-components"
 
 class Home extends Component {
   componentDidMount() {
@@ -99,7 +98,7 @@ class Home extends Component {
           </Column>
         </Masthead>
         <Section
-          height="1550px"
+          height="1450px"
           height768="1100px"
           style={{ justifyContent: "center" }}
         >
@@ -220,9 +219,8 @@ class Home extends Component {
                 // color={`${this.props.theme.colors.primary[500]}`}
                 // color="white"
                 fontsize="4rem"
-                fontsize768="7rem"
                 padding="1rem"
-                textalign="left"
+                textalign768="left"
               >
                 Did You KNOW?
               </Title>
@@ -233,58 +231,59 @@ class Home extends Component {
                 however...
               </Text>
               <Title
-                color={`${this.props.theme.colors.primary[200]}`}
+                color={`${this.props.theme.colors.primary[100]}`}
                 fontsize="3rem"
                 padding="1rem"
+                textalign768="left"
               >
                 Less than 1% of the world's water is usable.
               </Title>
             </Column>
           </Column>
         </Section>
-        <Section display="block" height="560px" height768="560px">
-          <Column margin="0 auto" maxwidth="960px">
-            <Box display="block">
-              <Img
-                background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509767877/home/greenhouse_progressive.jpg') center/cover no-repeat"
-                border="2px solid #55657e"
-                borderradius="50%"
-                float768="right"
-                height="250px"
-                width="250px"
-                height768="350px"
-                margin="20px auto"
-                margin768="80px auto"
-                textalign="center"
-                width768="350px"
-              />
+        <Section height="800px" height768="700px">
+          <Column
+            margin="0 auto"
+            maxwidth="960px"
+            justifycontent="center"
+            alignitems="center"
+            flexdirection768="row"
+          >
+            <Img
+              background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509767877/home/greenhouse_progressive.jpg') center/cover no-repeat"
+              border="2px solid #55657e"
+              borderradius="50%"
+              boxshadow={`0 0 20px 5px ${this.props.theme.colors.red[500]}`}
+              float768="right"
+              height="250px"
+              width="250px"
+              height768="300px"
+              margin="20px auto"
+              margin768="80px auto"
+              textalign="center"
+              width768="300px"
+            />
+            <Box width768="50%">
               <Title
-                color="#273e63"
+                margin="20px 0 0 0"
                 fontsize="2rem"
-                fontsize768="3rem"
-                margin768="160px 0 0 0"
+                fontsize768="3.5rem"
                 padding="0"
                 textalign="center"
                 textalign768="left"
+                texttransform="uppercase"
               >
                 Greenhouse Gases
               </Title>
-              <Title
-                color="#273e63"
-                fontsize="2rem"
-                fontsize768="3rem"
-                margin="0 0 10px 0"
-                padding="0"
-                textalign="center"
-                textalign768="left"
-              >
-                are also on the rise
+              <Title fontsize="2rem" textalign768="left" padding="0">
+                are on the rise
               </Title>
               <Text
-                color="#55657e"
-                fontsize="2rem"
+                fontsize="1.5rem"
                 textalign="center"
                 textalign768="left"
+                lineheight="1.8rem"
+                margin="20px 0 0 0"
               >
                 The world has made very little progress to eliminate this
                 environmental problem.

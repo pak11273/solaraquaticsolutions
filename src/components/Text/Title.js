@@ -88,6 +88,11 @@ const Title = styled.div`
       opacity: 1;
     }
   }
+
+  @media (min-width: 768px) {
+    text-align: ${(props) => props.textalign768};
+    font-size: ${(props) => props.fontsize768};
+  }
 `
 
 Title.defaultProps = {
@@ -96,6 +101,7 @@ Title.defaultProps = {
   fontweight: "600",
   padding: "0 5% 0 5%",
   width: "100%",
+  textalign: "center",
 }
 
 export default Title
