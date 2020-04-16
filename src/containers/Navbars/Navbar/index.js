@@ -30,7 +30,7 @@ const NavMenu = styled.nav`
   li {
     a {
       &:hover {
-        color: ${(props) => props.theme.colors.secondary};
+        color: ${(props) => props.theme.colors.secondary[500]};
       }
       &:visited {
         color: ${(props) => props.theme.colors.primary[500]};
@@ -63,7 +63,7 @@ const Menu = styled.ul`
     color: ${(props) => props.theme.colors.primary};
     font-size: 1rem;
     &:hover {
-      color: ${(props) => props.theme.colors.secondary};
+      color: ${(props) => props.theme.colors.secondary[500]};
     }
   }
 
@@ -96,7 +96,7 @@ const ResponsiveMenu = styled.div`
     color: ${(props) => props.theme.colors.primary};
     font-size: 1rem;
     &:hover {
-      color: ${(props) => props.theme.colors.secondary};
+      color: ${(props) => props.theme.colors.secondary[500]};
     }
   }
 

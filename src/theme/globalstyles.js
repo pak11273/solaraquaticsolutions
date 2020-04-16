@@ -25,7 +25,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1,h2,h3,h4,h5,h6 {
-   font-family: theme.typography.primary[500], Arial, sans-serif;
+   font-family: theme.typography.primaryFont, Arial, sans-serif;
   }
 
  h1 {
@@ -92,7 +92,7 @@ export const GlobalStyle = createGlobalStyle`
  }
 
  a:hover {
-   color: ${theme.colors.secondary};
+   color: ${theme.colors.secondary[500]};
  }
 
  img {

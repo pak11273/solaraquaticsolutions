@@ -32,6 +32,7 @@ const Container = styled.section`
     font-size: ${(props) => props.fontsize768};
     height: ${(props) => props.height768};
     left: ${(props) => props.left768};
+    justify-content: ${(props) => props.justifycontent768};
     max-width: ${(props) => props.maxwidth768};
     margin: ${(props) => props.margin768};
     position: ${(props) => props.position768};

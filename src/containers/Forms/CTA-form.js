@@ -27,7 +27,7 @@ const Form = styled.form`
   animation: slide-in-fwd-center 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   h6 {
     background: ${(props) => props.theme.colors.bg1};
-    color: ${(props) => props.theme.colors.secondary};
+    color: ${(props) => props.theme.colors.secondary[500]};
     padding: 20px 0;
     text-align: center;
   }
@@ -56,7 +56,7 @@ const Form = styled.form`
     color: ${(props) => props.avisited};
   }
   div {
-    background: ${(props) => props.theme.colors.secondary};
+    background: ${(props) => props.theme.colors.secondary[500]};
     left: 0;
     bottom: 0;
     height: 90px;
@@ -118,8 +118,8 @@ const Form = styled.form`
   }
 `
 Form.defaultProps = {
-  background: (props) => props.theme.colors.white,
-  color: (props) => props.theme.colors.primary,
+  background: (props) => props.theme.colors.grey[200],
+  color: (props) => props.theme.colors.primary[100],
   fontsize: "1.5rem",
   fontweight: "600",
   height: "500px",

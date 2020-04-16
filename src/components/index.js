@@ -4,6 +4,7 @@ import CTA from "./CTA.js"
 import Column from "./Columns/Column.js"
 import Img from "./Img.js"
 import InputLine from "./InputLine.js"
+import Logo from "./Logos/Logo.js"
 import { Pin } from "./Pins/Pin"
 import Row from "./Row.js"
 import ScrollToTop from "./ScrollToTop.js"
@@ -21,6 +22,7 @@ export {
   CTA,
   Img,
   InputLine,
+  Logo,
   Pin,
   Row,
   ScrollToTop,

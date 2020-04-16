@@ -3,6 +3,7 @@ import {
   CTA,
   Column,
   Img,
+  Logo,
   Pin,
   Section,
   Subtitle,
@@ -12,7 +13,9 @@ import {
 import { CTAForm, Masthead } from "../containers"
 import React, { Component } from "react"
 
+import Graphic from "src/assets/images/logo-v3.svg"
 import { Helmet } from "react-helmet"
+import { Sphere } from "@styled-icons/icomoon"
 import Wrapper from "../components/Wrapper"
 import { withTheme } from "styled-components"
 
@@ -64,13 +67,13 @@ class Home extends Component {
               margin="60px 0 0 20px"
               margin768="60px 0 0 0"
             >
-              <Title color="white" padding="0" textalign="left">
+              <Title padding="0" textalign="left">
                 <h1>SOLAR</h1>
                 <h2>AQUATIC</h2>
                 <h3>SOLUTIONS</h3>
               </Title>
               <Subtitle
-                color="white"
+                color={`${this.props.theme.colors.grey[200]}`}
                 display="none"
                 display768="flex"
                 fontsize="1.5rem"
@@ -90,13 +93,7 @@ class Home extends Component {
             margin="0 auto"
             width="100%"
           >
-            <CTAForm
-              acolor="#273e63"
-              avisited="#273e63"
-              height="400px"
-              text="Subscribe"
-              width="300px"
-            />
+            <CTAForm height="400px" text="read" width="300px" />
           </Column>
         </Masthead>
         <Section
@@ -213,13 +210,7 @@ class Home extends Component {
         >
           <Column flexdirection768="row" maxwidth="960px">
             <Column>
-              <Title
-                // color={`${this.props.theme.colors.primary[500]}`}
-                // color="white"
-                fontsize="4rem"
-                padding="1rem"
-                textalign768="left"
-              >
+              <Title fontsize="4rem" padding="1rem" textalign768="left">
                 Did You KNOW?
               </Title>
             </Column>
@@ -290,22 +281,33 @@ class Home extends Component {
             </Box>
           </Column>
         </Section>
-        <Section background="#273e63" style={{ justifyContent: "center" }}>
-          <Column margin="60px 0 0 0" maxwidth="960px">
+        <Section
+          style={{ justifyContent: "center" }}
+          background={`${this.props.theme.colors.bg3}`}
+          backgroundimage={`url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='18' viewBox='0 0 100 18'%3E%3Cpath fill='%23577691' fill-opacity='0.18' d='M61.82 18c3.47-1.45 6.86-3.78 11.3-7.34C78 6.76 80.34 5.1 83.87 3.42 88.56 1.16 93.75 0 100 0v6.16C98.76 6.05 97.43 6 96 6c-9.59 0-14.23 2.23-23.13 9.34-1.28 1.03-2.39 1.9-3.4 2.66h-7.65zm-23.64 0H22.52c-1-.76-2.1-1.63-3.4-2.66C11.57 9.3 7.08 6.78 0 6.16V0c6.25 0 11.44 1.16 16.14 3.42 3.53 1.7 5.87 3.35 10.73 7.24 4.45 3.56 7.84 5.9 11.31 7.34zM61.82 0h7.66a39.57 39.57 0 0 1-7.34 4.58C57.44 6.84 52.25 8 46 8S34.56 6.84 29.86 4.58A39.57 39.57 0 0 1 22.52 0h15.66C41.65 1.44 45.21 2 50 2c4.8 0 8.35-.56 11.82-2z'%3E%3C/path%3E%3C/svg%3E")`}
+        >
+          <Column margin="140px 0 0 0" maxwidth="960px">
             <Title
-              color="white"
+              color={`${this.props.theme.colors.grey[400]}`}
               fontsize="4rem"
               margin="0 0 10px 0"
               padding="0"
               textalign="center"
             >
-              The Solar Aquatic Solution
+              The{" "}
+              <span
+                style={{ color: `${this.props.theme.colors.secondary[500]}` }}
+              >
+                Solar
+              </span>{" "}
+              Aquatic Solution
             </Title>
           </Column>
           <Column maxwidth="960px">
             <Title
-              color="white"
-              fontsize="2rem"
+              color={`${this.props.theme.colors.grey[400]}`}
+              fontsize="1.5rem"
+              lineheight="2rem"
               margin="0 0 10px 0"
               padding="0"
               textalign="center"
@@ -314,7 +316,7 @@ class Home extends Component {
               advancements in solar technology to produce clean, renewable
               energy.
             </Title>
-            <Column flexdirection768="row">
+            <Column margin="50px 0 0 0" flexdirection768="row">
               <Box>
                 <Img
                   background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509768144/home/sunVector.svg') center/cover no-repeat"
@@ -327,7 +329,7 @@ class Home extends Component {
                   width768="180px"
                 />
                 <Title
-                  color="yellow"
+                  color={`${this.props.theme.colors.secondary[500]}`}
                   fontsize="2rem"
                   fontsize768="3rem"
                   margin="0 0 10px 0"
@@ -339,34 +341,34 @@ class Home extends Component {
               </Box>
               <Box>
                 <Text
-                  color="white"
+                  color={`${this.props.theme.colors.grey[400]}`}
                   display="none"
                   display768="block"
                   fontsize="6rem"
                   fontweight="900"
-                  margin768="50px"
+                  margin768="-54px 16px 50px 0"
                   textalign="center"
                 >
                   +
                 </Text>
               </Box>
-              <Box>
+              <Box margin="20px 0 0 0" margin768="0 0 0 20px">
                 <Img
                   background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509768254/home/waterWave-progressive.jpg') center/cover no-repeat"
                   borderradius="50%"
                   float768="right"
                   height="120px"
-                  margin768="30px 0"
+                  margin768="0"
                   width="120px"
                   height768="120px"
                   textalign="center"
                   width768="120px"
                 />
                 <Title
-                  color="blue"
+                  color={`${this.props.theme.colors.primary[500]}`}
                   fontsize="2rem"
                   fontsize768="3rem"
-                  margin="0 0 10px 0"
+                  margin768="50px 0 10px 0"
                   padding="0"
                   textalign="center"
                 >
@@ -382,20 +384,20 @@ class Home extends Component {
                   0
                 </Title>
               </Box>
-              <Box>
+              <Box alignitems="flex-start" justifycontent="flex-start">
                 <Text
-                  color="white"
+                  color={`${this.props.theme.colors.grey[400]}`}
                   display="none"
                   display768="block"
                   fontsize="6rem"
                   fontweight="900"
-                  margin768="50px"
+                  margin768="45px"
                   textalign="center"
                 >
                   =
                 </Text>
               </Box>
-              <Box>
+              <Box margin768="0 0 0 -120px">
                 <Img
                   background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509768340/home/greenPower.svg') center/cover no-repeat"
                   borderradius="50%"
@@ -407,7 +409,7 @@ class Home extends Component {
                   width768="180px"
                 />
                 <Title
-                  color="green"
+                  color={`${this.props.theme.colors.fg2}`}
                   fontsize="2rem"
                   fontsize768="3rem"
                   margin="0 0 10px 0"
@@ -420,18 +422,18 @@ class Home extends Component {
             </Column>
             <Column>
               <Title
-                color="white"
-                fontsize="2rem"
+                color={`${this.props.theme.colors.grey[400]}`}
+                fontsize="1.5rem"
+                lineheight="2rem"
                 margin="60px 0 10px 0"
                 padding="0"
                 textalign="center"
               >
-                Then we apply that energy to mimic mother nature's way of
-                producing fresh, pure water.
+                We use the same principles of nature to extract clean water.
               </Title>
               <Img
                 background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509767943/home/naturecycle-progressive.jpg') center/cover no-repeat"
-                border="2px solid #55657e"
+                boxshadow={`0 0 10px 10px ${this.props.theme.colors.primary[500]}`}
                 borderradius="10px"
                 float768="right"
                 height="250px"
@@ -443,29 +445,52 @@ class Home extends Component {
                 width768="600px"
               />
               <Box
-                flexdirection="row"
-                margin="0 auto 100px"
-                maxwidth768="300px"
+                flexdirection768="row"
+                margin="60px 0 100px 0"
+                margin768="60px auto 100px"
+                maxwidth768="600px"
               >
-                <Title
-                  color="white"
-                  fontsize="1.5rem"
-                  fontsize768="1.5rem"
-                  margin="0 0 10px 0"
-                  padding="0"
-                  textalign="center"
+                <Box
+                  width="270px"
+                  alignitems768="flex-start"
+                  justifycontent768="flex-start"
                 >
-                  Learn more about our technology
-                </Title>
+                  <Title
+                    color={`${this.props.theme.colors.grey[400]}`}
+                    fontsize="1.3rem"
+                    fontsize768="1.3rem"
+                    padding="0"
+                    textalign768="left"
+                    width768="100%"
+                  >
+                    Learn more
+                  </Title>
+                  <Title
+                    color={`${this.props.theme.colors.grey[400]}`}
+                    fontsize="1.5rem"
+                    fontsize768="2rem"
+                    padding="0"
+                    textalign768="left"
+                    width768="100%"
+                    margin="0 0 40px 0"
+                    margin768="0"
+                  >
+                    about our{" "}
+                    <span style={{ fontSize: "2.5rem" }}>Technology</span>
+                  </Title>
+                </Box>
                 <CTA
-                  acolor="#273e63"
-                  avisited="#273e63"
-                  alignself="flex-start"
-                  background="red"
-                  height="500px"
+                  logo={Graphic}
+                  logoheight="30px"
+                  logowidth="25px"
+                  logomargin="0 10px 0 0"
+                  acolor={`${this.props.theme.colors.primary[800]}`}
+                  avisited={`${this.props.theme.colors.primary[800]}`}
+                  onhovercolor={`${this.props.theme.colors.secondary[200]}`}
+                  text="The Process"
+                  width="220px"
+                  height="50px"
                   to="/technology"
-                  text="Read More"
-                  width="400px"
                 />
               </Box>
             </Column>
