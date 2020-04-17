@@ -51,7 +51,7 @@ class App extends Component {
                   {...theme}
                   background={`${theme.colors.bg3}`}
                   copy={`SolarAquaticSolutions LLC`}
-                  height="1200px"
+                  height="900px"
                   info="Clean water for the future"
                   margin960="0 auto"
                 />

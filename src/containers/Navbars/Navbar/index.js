@@ -261,7 +261,7 @@ class Navbar extends Component {
                     <MyLink
                       exact
                       activeStyle={{
-                        background: this.props.theme.colors.primary[200],
+                        background: this.props.theme.colors.primary[500],
                         padding: "10px",
                         color: this.props.theme.colors.grey[200],
                       }}

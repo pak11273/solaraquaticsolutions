@@ -502,7 +502,7 @@ class Home extends Component {
           </Column>
         </Section>
         <Section
-          height768="300px"
+          height768="600px"
           height="800px"
           style={{ justifyContent: "center" }}
         >
