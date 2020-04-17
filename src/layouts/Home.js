@@ -67,7 +67,7 @@ class Home extends Component {
               margin="60px 0 0 20px"
               margin768="60px 0 0 0"
             >
-              <Title padding="0" textalign="left">
+              <Title h1fontsize="1rem" padding="0" textalign="left">
                 <h1>SOLAR</h1>
                 <h2>AQUATIC</h2>
                 <h3>SOLUTIONS</h3>
@@ -496,40 +496,38 @@ class Home extends Component {
             </Column>
           </Column>
         </Section>
-        <Section height="680px" style={{ justifyContent: "center" }}>
+        <Section
+          height768="300px"
+          height="800px"
+          style={{ justifyContent: "center" }}
+        >
           <Column maxwidth="960px">
-            <Title
-              color="#273e63"
-              fontsize="3rem"
-              margin="60px 0 0 0"
-              margin768="0 0 100px 0"
-              padding="0"
-              textalign="center"
+            <Column
+              flexdirection768="row"
+              justifycontent="center"
+              alignitems="center"
             >
-              Our Partners
-            </Title>
-            <Column flexdirection768="row">
               <Box>
                 <Img
                   background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509767073/home/jwLogo.svg') center/cover no-repeat"
-                  height="190px"
-                  margin="20px 0 0 0"
-                  width="300px"
+                  height="120px"
+                  margin768="0px 0 0 0"
+                  width="230px"
                 />
               </Box>
               <Box>
                 <Img
                   background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509767515/home/vsenginerring.svg') center/cover no-repeat"
-                  height="200px"
-                  margin="20px 0 0 0"
-                  width="300px"
+                  height="250px"
+                  margin="70px 0 0 0"
+                  width="350px"
                 />
               </Box>
               <Box>
                 <Img
                   background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509768574/home/clearPowerLogo.png') center/cover no-repeat"
                   height="100px"
-                  margin="20px 0 0 0"
+                  margin="0"
                   width="265px"
                 />
               </Box>

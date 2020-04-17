@@ -5,6 +5,7 @@ import styled from "styled-components"
 const Section = styled.section`
   align-items: ${(props) => props.alignitems};
   background: ${(props) => props.background};
+  background-color: ${(props) => props.backgroundcolor};
   background-attachment: ${(props) => props.backgroundattachment};
   background-image: ${(props) => props.backgroundimage};
   box-sizing: border-box;

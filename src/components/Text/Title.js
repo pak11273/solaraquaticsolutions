@@ -17,7 +17,7 @@ const Title = styled.div`
   h1 {
     color: ${(props) => props.theme.colors.secondary[500]};
     display: block;
-    font-size: 4.5rem;
+    font-size: ${(props) => props.h1fontsize};
     line-height: 3rem;
     -webkit-animation: fade-in-left 1s linear both;
     animation: fade-in-left 1s linear both;
@@ -102,6 +102,7 @@ Title.defaultProps = {
   color: theme.colors.primaryText,
   fontsize: "4.5rem",
   fontweight: "600",
+  h1fontsize: "1rem",
   padding: "0 5% 0 5%",
   width: "100%",
   textalign: "center",
