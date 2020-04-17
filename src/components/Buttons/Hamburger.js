@@ -20,7 +20,7 @@ Menu.defaultProps = {
 }
 
 const Bar = styled.div`
-  background: ${(props) => props.theme.colors.primary};
+  background: ${(props) => props.theme.colors.primary[500]};
   height: 5px;
   margin: 3px 0;
   width: 35px;

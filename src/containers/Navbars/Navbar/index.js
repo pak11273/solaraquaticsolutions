@@ -14,7 +14,7 @@ import { toggleDropdown } from "./actions.js"
 const NavMenu = styled.nav`
   align-items: center;
   font-family: ${(props) => props.theme.colors.primaryFont};
-  background-color: ${(props) => props.theme.colors.white};
+  background-color: ${(props) => props.theme.colors.grey[200]};
   -webkit-box-align: center;
   -webkit-box-pack: end;
   box-sizing: border-box;
@@ -110,7 +110,7 @@ ResponsiveMenu.defaultProps = {
 
 const MyLink = styled(NavLink)`
   &.active {
-    background: props.theme.colors.primary;
+    background: ${(props) => props.theme.colors.primary[500]};
   }
 `
 
@@ -120,7 +120,7 @@ const TopDropItem = styled(NavLink)`
     color: blue;
   }
   &:hover {
-    color: white;
+    color: props.theme.colors.grey[500];
   }
   &:after {
     content: "";
@@ -138,7 +138,7 @@ const DropItem = styled(NavLink)`
     color: blue;
   }
   &:hover {
-    color: white;
+    color: props.theme.colors.grey[200];
   }
 `
 class Navbar extends Component {
@@ -261,9 +261,9 @@ class Navbar extends Component {
                     <MyLink
                       exact
                       activeStyle={{
-                        background: this.props.theme.colors.primary,
+                        background: this.props.theme.colors.primary[200],
                         padding: "10px",
-                        color: this.props.theme.colors.white,
+                        color: this.props.theme.colors.grey[200],
                       }}
                       onClick={this.handleNavClick}
                       to={"/" + item}
@@ -286,10 +286,10 @@ class Navbar extends Component {
                 to="/"
                 exact
                 activeStyle={{
-                  background: this.props.theme.colors.primary,
+                  background: this.props.theme.colors.primary[500],
                   padding: "1rem",
                   paddingRight: "100%",
-                  color: this.props.theme.colors.white,
+                  color: this.props.theme.colors.grey[200],
                 }}
               >
                 home
@@ -304,7 +304,7 @@ class Navbar extends Component {
                       background: this.props.theme.colors.primary,
                       padding: "1rem",
                       paddingRight: "100%",
-                      color: this.props.theme.colors.white,
+                      color: this.props.theme.colors.grey[200],
                     }}
                     to={"/" + item}
                   >

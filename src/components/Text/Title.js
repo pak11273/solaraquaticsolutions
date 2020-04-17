@@ -18,21 +18,22 @@ const Title = styled.div`
     color: ${(props) => props.theme.colors.secondary[500]};
     display: block;
     font-size: ${(props) => props.h1fontsize};
-    line-height: 3rem;
+    line-height: ${(props) => props.h1lineheight};
     -webkit-animation: fade-in-left 1s linear both;
     animation: fade-in-left 1s linear both;
     @media (min-width: 768px) {
-      font-size: 6rem;
+      font-size: ${(props) => props.h1fontsize768};
+      line-height: ${(props) => props.h1lineheight768};
     }
   }
   h2 {
-    font-size: 3.6rem;
+    font-size: ${(props) => props.h2fontsize};
     color: ${(props) => props.theme.colors.grey[200]};
     text-shadow: ${(props) => props.h2textshadow};
     -webkit-animation: fade-in-right 1s linear both;
     animation: fade-in-right 1s linear both;
     @media (min-width: 768px) {
-      font-size: 5.3rem;
+      font-size: ${(props) => props.h2fontsize768};
     }
   }
   h3 {

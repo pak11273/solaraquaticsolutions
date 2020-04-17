@@ -67,7 +67,13 @@ class Home extends Component {
               margin="60px 0 0 20px"
               margin768="60px 0 0 0"
             >
-              <Title h1fontsize="1rem" padding="0" textalign="left">
+              <Title
+                h1fontsize="4rem"
+                h1lineheight="1.8rem"
+                h2fontsize="4rem"
+                padding="0"
+                textalign="left"
+              >
                 <h1>SOLAR</h1>
                 <h2>AQUATIC</h2>
                 <h3>SOLUTIONS</h3>
