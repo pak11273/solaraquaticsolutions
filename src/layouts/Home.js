@@ -140,7 +140,7 @@ class Home extends Component {
                 width768="250px"
               />
               <Text
-                fontsize="2rem"
+                fontsize="1.6rem"
                 color={`${this.props.theme.colors.primary[700]}`}
                 fontweight="800"
                 padding="1rem"
@@ -162,7 +162,7 @@ class Home extends Component {
                 width768="250px"
               />
               <Text
-                fontsize="2rem"
+                fontsize="1.6rem"
                 color={`${this.props.theme.colors.primary[700]}`}
                 fontweight="800"
                 padding="1rem"
@@ -184,7 +184,7 @@ class Home extends Component {
                 width768="250px"
               />
               <Text
-                fontsize="2rem"
+                fontsize="1.6rem"
                 color={`${this.props.theme.colors.primary[700]}`}
                 fontweight="800"
                 padding="1rem"
