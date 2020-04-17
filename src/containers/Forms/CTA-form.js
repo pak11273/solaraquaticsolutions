@@ -26,14 +26,14 @@ const Form = styled.form`
     cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-in-fwd-center 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   h6 {
-    background: ${(props) => props.theme.colors.bg1};
+    background: ${(props) => props.theme.colors.primary[700]};
     color: ${(props) => props.theme.colors.secondary[500]};
     padding: 20px 0;
     text-align: center;
   }
   p {
     font-family: ${(props) => props.theme.typography.primaryFont};
-    color: ${(props) => props.theme.colors.bg1};
+    color: ${(props) => props.theme.colors.primary[700]};
   }
   p:nth-child(1) {
     padding: 20px;
@@ -48,8 +48,7 @@ const Form = styled.form`
     padding: 20px;
   }
   a {
-    color: ${(props) => props.color};
-    font-size: ${(props) => props.fontsize};
+    font-size: ${(props) => props.theme.typography.fontsize};
   }
 
   a:visited {
@@ -76,7 +75,7 @@ const Form = styled.form`
   }
   div > input {
     border: none;
-    border-top: 1px solid ${(props) => props.theme.colors.bg1};
+    border-top: 1px solid ${(props) => props.theme.colors.bg3};
     display: flex;
     justify-content: center;
     align-items: center;

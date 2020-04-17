@@ -38,9 +38,13 @@ const Title = styled.div`
   }
   h3 {
     display: block;
-    color: ${(props) => props.theme.colors.white};
+    color: ${(props) => props.theme.colors.grey[200]};
     line-height: 1rem;
     font-size: 2rem;
+  }
+  h6 {
+    font-size: ${(props) => props.h6fontsize};
+    color: ${(props) => props.h6color};
   }
   @-webkit-keyframes fade-in-left {
     0% {

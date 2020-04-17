@@ -48,8 +48,10 @@ class App extends Component {
                   ))}
                 </Switch>
                 <Footer
-                  background="#F0FDFF"
-                  copy="&copy; 2017 SolarAquaticSolutions LLC"
+                  {...theme}
+                  background={`${theme.colors.bg3}`}
+                  copy={`SolarAquaticSolutions LLC`}
+                  height="1200px"
                   info="Clean water for the future"
                   margin960="0 auto"
                 />

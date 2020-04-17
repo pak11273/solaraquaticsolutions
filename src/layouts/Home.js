@@ -34,7 +34,7 @@ class Home extends Component {
   }
 
   render() {
-    console.log("border: ", this.props.theme.colors.red[500])
+    console.log("border: ", this.props.theme.colors.primary[700])
     return (
       <Wrapper>
         <Helmet>
@@ -116,7 +116,7 @@ class Home extends Component {
             >
               Life's greatest resource
             </Title>
-            <Pin />
+            <Pin margin="15px auto" />
             <Subtitle margin="10px 0 0 0">
               Water faces several threats today
             </Subtitle>
@@ -132,7 +132,7 @@ class Home extends Component {
               <Img
                 background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509767627/home/global_warming_optimized.jpg') center/cover no-repeat"
                 borderradius="50%"
-                bordercolor={`${this.props.theme.colors.red[400]}`}
+                bordercolor={`${this.props.theme.colors.primary[700]}`}
                 borderwidth="4px"
                 height="200px"
                 width="200px"
@@ -140,8 +140,8 @@ class Home extends Component {
                 width768="250px"
               />
               <Text
-                fontsize="1rem"
-                color={`${this.props.theme.colors.red[400]}`}
+                fontsize="2rem"
+                color={`${this.props.theme.colors.primary[700]}`}
                 fontweight="800"
                 padding="1rem"
                 textalign="center"
@@ -154,7 +154,7 @@ class Home extends Component {
               <Img
                 background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509768406/home/drought-progressive.jpg') center/cover no-repeat"
                 borderradius="50%"
-                bordercolor={`${this.props.theme.colors.red[500]}`}
+                bordercolor={`${this.props.theme.colors.primary[700]}`}
                 borderwidth="4px"
                 height="200px"
                 width="200px"
@@ -162,21 +162,21 @@ class Home extends Component {
                 width768="250px"
               />
               <Text
-                fontsize="1rem"
-                color={`${this.props.theme.colors.red[400]}`}
+                fontsize="2rem"
+                color={`${this.props.theme.colors.primary[700]}`}
                 fontweight="800"
                 padding="1rem"
                 textalign="center"
                 texttransform="uppercase"
               >
-                Diminishing Water Supply
+                Depleted Resources
               </Text>
             </Box>
             <Box margin="0 30px 30px 30px">
               <Img
                 background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509768479/home/polluted_water1-progressive.jpg') center/cover no-repeat"
                 borderradius="50%"
-                bordercolor={`${this.props.theme.colors.red[500]}`}
+                bordercolor={`${this.props.theme.colors.primary[700]}`}
                 borderwidth="4px"
                 height="200px"
                 width="200px"
@@ -184,8 +184,8 @@ class Home extends Component {
                 width768="250px"
               />
               <Text
-                fontsize="1rem"
-                color={`${this.props.theme.colors.red[400]}`}
+                fontsize="2rem"
+                color={`${this.props.theme.colors.primary[700]}`}
                 fontweight="800"
                 padding="1rem"
                 textalign="center"
@@ -248,7 +248,7 @@ class Home extends Component {
               background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509767877/home/greenhouse_progressive.jpg') center/cover no-repeat"
               border="2px solid #55657e"
               borderradius="50%"
-              boxshadow={`0 0 20px 5px ${this.props.theme.colors.red[500]}`}
+              boxshadow={`0 0 20px 5px ${this.props.theme.colors.primary[700]}`}
               float768="right"
               height="250px"
               width="250px"
@@ -290,9 +290,8 @@ class Home extends Component {
         <Section
           style={{ justifyContent: "center" }}
           background={`${this.props.theme.colors.bg3}`}
-          backgroundimage={`url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='18' viewBox='0 0 100 18'%3E%3Cpath fill='%23577691' fill-opacity='0.18' d='M61.82 18c3.47-1.45 6.86-3.78 11.3-7.34C78 6.76 80.34 5.1 83.87 3.42 88.56 1.16 93.75 0 100 0v6.16C98.76 6.05 97.43 6 96 6c-9.59 0-14.23 2.23-23.13 9.34-1.28 1.03-2.39 1.9-3.4 2.66h-7.65zm-23.64 0H22.52c-1-.76-2.1-1.63-3.4-2.66C11.57 9.3 7.08 6.78 0 6.16V0c6.25 0 11.44 1.16 16.14 3.42 3.53 1.7 5.87 3.35 10.73 7.24 4.45 3.56 7.84 5.9 11.31 7.34zM61.82 0h7.66a39.57 39.57 0 0 1-7.34 4.58C57.44 6.84 52.25 8 46 8S34.56 6.84 29.86 4.58A39.57 39.57 0 0 1 22.52 0h15.66C41.65 1.44 45.21 2 50 2c4.8 0 8.35-.56 11.82-2z'%3E%3C/path%3E%3C/svg%3E")`}
         >
-          <Column margin="140px 0 0 0" maxwidth="960px">
+          <Column margin="140px 0 0 0" margin768="240px 0 0 0" maxwidth="960px">
             <Title
               color={`${this.props.theme.colors.grey[400]}`}
               fontsize="4rem"
@@ -453,7 +452,7 @@ class Home extends Component {
               <Box
                 flexdirection768="row"
                 margin="60px 0 100px 0"
-                margin768="60px auto 100px"
+                margin768="60px auto 200px"
                 maxwidth768="600px"
               >
                 <Box
@@ -507,7 +506,7 @@ class Home extends Component {
           height="800px"
           style={{ justifyContent: "center" }}
         >
-          <Column maxwidth="960px">
+          <Column maxwidth="1280px">
             <Column
               flexdirection768="row"
               justifycontent="center"

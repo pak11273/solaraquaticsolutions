@@ -87,6 +87,7 @@ export const colors = {
   bg2: "rgba(46, 40, 42, 1)",
   fg2: "rgba(118, 176, 65, 1)",
   bg3: "#012C4B",
+  fg3: "rgba(255,255,255, 1)",
   disabled: "hsl(212.3, 16.7%, 69.4%)",
   error: "hsl(359.6, 82.1%, 62.7%)",
   errorActive: "hsl(359.6, 82.1%, 42.7%)",
