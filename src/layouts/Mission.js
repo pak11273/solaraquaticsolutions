@@ -278,20 +278,35 @@ class Mission extends Component {
         >
           <Column display="block" height="100%">
             <Box
-              position960="absolute"
-              textalign="center"
-              top="150px"
-              left960="50%"
-              width="300px"
-              width768="600px"
+              maxwidth="960px"
+              alignitems="flex-start"
+              flexdirection960="row"
+              justifycontent="flex-start"
+              height="100%"
+              width="80%"
             >
-              <Title
-                fontsize="4rem"
-                textalign768="center"
-                padding="20px 0 20px 30px"
+              <Box
+                margin="200px auto"
+                alignitems="center"
+                justifycontent="center"
               >
-                The 21st Century Solution
-              </Title>
+                <Text
+                  fontsize="2rem"
+                  fontsize768="4vw"
+                  color={`${this.props.theme.colors.grey[200]}`}
+                >
+                  The 21st
+                </Text>
+                <Text
+                  fontsize="2rem"
+                  fontsize="2rem"
+                  fontsize768="4vw"
+                  color={`${this.props.theme.colors.grey[200]}`}
+                  textalign="center"
+                >
+                  Century Solution
+                </Text>
+              </Box>
             </Box>
           </Column>
         </Section>
