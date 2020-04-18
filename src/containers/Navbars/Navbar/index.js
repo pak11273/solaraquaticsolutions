@@ -27,16 +27,6 @@ const NavMenu = styled.nav`
   top: 0;
   width: 100%;
   z-index: 99;
-  li {
-    a {
-      &:hover {
-        color: ${(props) => props.theme.colors.secondary[500]};
-      }
-      &:visited {
-        color: ${(props) => props.theme.colors.primary[500]};
-      }
-    }
-  }
   @media (min-width: 768px) {
     justify-content: space-evenly;
   }
@@ -56,6 +46,7 @@ const Menu = styled.ul`
   }
 
   li a {
+    min-width: 200px;
     font-size: 1rem;
   }
 
@@ -75,7 +66,7 @@ const Menu = styled.ul`
 `
 
 Menu.defaultProps = {
-  width: "490px",
+  minWidth: "600px",
 }
 
 const ResponsiveMenu = styled.div`
@@ -304,6 +295,7 @@ class Navbar extends Component {
                       background: this.props.theme.colors.primary,
                       padding: "1rem",
                       paddingRight: "100%",
+                      whiteSpace: "nowrap",
                       color: this.props.theme.colors.grey[200],
                     }}
                     to={"/" + item}

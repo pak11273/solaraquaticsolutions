@@ -39,7 +39,7 @@ class App extends Component {
               <Wrapper>
                 <Navbar
                   position="fixed"
-                  list={["About", "Technology", "Gallery", "Contact"]}
+                  list={["Our Mission", "Technology", "Gallery", "Contact"]}
                 />
                 <Spacer height="80px" height768="80px" />
                 <Switch>

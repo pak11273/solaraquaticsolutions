@@ -1,5 +1,5 @@
-import Home from './Home'
-import About from './About'
-import Technology from './Technology'
+import Home from "./Home"
+import Mission from "./Mission"
+import Technology from "./Technology"
 
-export {Home, About, Technology}
+export { Home, Mission, Technology }

@@ -15,8 +15,10 @@ import Article from "../containers/Articles/Article.js"
 import { Helmet } from "react-helmet"
 import Navbar from "../containers/Navbars/Navbar"
 
-class About extends Component {
+class Mission extends Component {
   render() {
+    console.log("theme: ", this.props)
+
     return (
       <Wrapper margin="0 auto">
         <Helmet>
@@ -27,7 +29,7 @@ class About extends Component {
           />
           <meta name="description" content="Solar Aquatic Solutions, LLC" />
           <meta name="author" content="Solar Aquatic Solutions, LLC" />
-          <title>SAS | About</title>
+          <title>SAS | Our Mission</title>
           <link
             rel="canonical"
             href="https://solaraquaticsolutions.world/about"
@@ -45,12 +47,12 @@ class About extends Component {
               left960="50%"
               width="245px"
               width768="370px"
-              fontsize="2rem"
-              fontsize768="3rem"
             >
-              <Text color="white">Don’t Waste Water</Text>
-              <Text color="white" textalign="center">
-                We Need It
+              <Text color={`${this.props.theme.colors.grey[200]}`}>
+                Natural
+              </Text>
+              <Text color={`${this.props.theme.colors.grey[200]}`}>
+                Disasters
               </Text>
             </Box>
           </Column>
@@ -253,4 +255,4 @@ class About extends Component {
   }
 }
 
-export default About
+export default Mission

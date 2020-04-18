@@ -11,7 +11,7 @@ import ScrollToTop from "./ScrollToTop.js"
 import Section from "./Section.js"
 import Spacer from "./Spacer.js"
 import Subtitle from "./Text/Subtitle"
-import Text from "./Text.js"
+import Text from "./Text/Text.js"
 import Title from "./Text/Title.js"
 import Wrapper from "./Wrapper"
 
