@@ -5,6 +5,10 @@ import styled from "styled-components"
 const Container = styled.section`
   align-items: ${(props) => props.alignitems};
   background: ${(props) => props.background};
+  border-top: ${(props) => props.bordertop};
+  border-bottom: ${(props) => props.borderbottom};
+  border-left: ${(props) => props.borderleft};
+  border-right: ${(props) => props.borderright};
   box-sizing: border-box;
   display: ${(props) => props.display};
   flex-direction: ${(props) => props.flexdirection};
@@ -24,6 +28,12 @@ const Container = styled.section`
   text-align: ${(props) => props.textalign};
   width: ${(props) => props.width};
   z-index: ${(props) => props.zindex};
+
+  @media (min-width: 360px) {
+    display: ${(props) => props.display360};
+    margin: ${(props) => props.margin360};
+    width: ${(props) => props.width360};
+  }
 
   @media (min-width: 768px) {
     align-items: ${(props) => props.alignitems768};

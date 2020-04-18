@@ -2,6 +2,7 @@ import {
   Box,
   Column,
   Img,
+  Pin,
   Section,
   Subtitle,
   Text,
@@ -17,8 +18,6 @@ import Navbar from "../containers/Navbars/Navbar"
 
 class Mission extends Component {
   render() {
-    console.log("theme: ", this.props)
-
     return (
       <Wrapper margin="0 auto">
         <Helmet>
@@ -39,25 +38,54 @@ class Mission extends Component {
           background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509802242/about/dustBowl-v2.jpg') center/cover no-repeat"
           height="600px"
         >
+          <Box
+            height="0"
+            left="0"
+            display="none"
+            display360="block"
+            width360="70%"
+            position="absolute"
+            bordertop={`600px solid ${this.props.theme.colors.bg3}`}
+            borderright="600px solid transparent"
+            opacity="80%"
+          ></Box>
+
           <Column display="block" height="100%">
             <Box
-              position960="absolute"
-              textalign="center"
-              top="350px"
-              left960="50%"
-              width="245px"
-              width768="370px"
+              maxwidth="960px"
+              alignitems="flex-start"
+              flexdirection960="row"
+              justifycontent="center"
+              height="100%"
+              width="80%"
             >
-              <Text color={`${this.props.theme.colors.grey[200]}`}>
-                Natural
-              </Text>
-              <Text color={`${this.props.theme.colors.grey[200]}`}>
-                Disasters
-              </Text>
+              <Box
+                margin="0 0 0 10px"
+                alignitems="flex-start"
+                padding="0 0 0 20px"
+              >
+                <Text
+                  fontsize="2rem"
+                  fontsize768="4vw"
+                  color={`${this.props.theme.colors.grey[200]}`}
+                >
+                  Natural
+                </Text>
+                <Text
+                  fontsize="2rem"
+                  fontsize="2rem"
+                  fontsize768="4vw"
+                  color={`${this.props.theme.colors.grey[200]}`}
+                >
+                  Disasters
+                </Text>
+              </Box>
             </Box>
           </Column>
         </Section>
         <Section
+          height="800px"
+          height768="500px"
           margin="80px auto"
           maxwidth="960px"
           flexdirection960="row"
@@ -67,15 +95,37 @@ class Mission extends Component {
             <Text
               fontsize="1.5rem"
               fontsize768="2rem"
+              position="relative"
+              textalign="justify"
+              textalign768="left"
+              margin="0 auto"
+              width="60%"
+            >
+              "Water contaminated with fuel or toxic chemicals will not be made
+              safe by boiling or disinfection."
+              <span
+                style={{
+                  fontWeight: "600",
+                  fontSize: "1.5rem",
+                  position: "absolute",
+                  display: "block",
+                  right: "20px",
+                }}
+              >
+                - CDC
+              </span>
+            </Text>
+            <Pin margin="50px auto" />
+            <Text
+              fontsize="1.5rem"
+              lineheight="2rem"
               textalign="justify"
               textalign768="left"
               margin="0 auto"
             >
               Around the world civilizations experience natural disasters that
               have a lasting effect on our water supplies such as droughts,
-              hurricanes, flooding rains and tsunamis, just to name a few. These
-              phenomenon's leave lasting effects on the water we drink, which is
-              a fundamental necessity for all life.
+              hurricanes, flooding rains and tsunamis, just to name a few.
             </Text>
           </Column>
         </Section>
@@ -83,34 +133,53 @@ class Mission extends Component {
           background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509802349/about/stomachPain-v2.jpg') center/cover no-repeat"
           height="600px"
         >
+          <Box
+            height="0"
+            right="0"
+            display="none"
+            display360="block"
+            width360="70%"
+            position="absolute"
+            borderbottom={`600px solid ${this.props.theme.colors.bg3}`}
+            borderleft="600px solid transparent"
+            opacity="80%"
+          ></Box>
           <Column display="block" height="100%">
             <Box
-              position960="absolute"
-              textalign="center"
-              top="30px"
-              top768="150px"
-              left960="50%"
-              width="300px"
-              width768="600px"
+              maxwidth="960px"
+              alignitems="flex-end"
+              flexdirection960="row"
+              justifycontent="center"
+              height="100%"
+              width="80%"
             >
-              <Text
-                background="wheat"
-                background768="none"
-                padding="20px"
-                color="#273e63"
-                fontsize="2.3rem"
-                fontweight="600"
-                margin="60px 0 0 0"
-                textalign="center"
+              <Box
+                margin="0 0 0 10px"
+                alignitems="flex-end"
+                padding="0 0 0 20px"
               >
-                When our water becomes disrupted by a natural disaster, it
-                becomes undrinkable and full of dangerous contaminates, which
-                can cause lasting health problems.
-              </Text>
+                <Text
+                  fontsize="2rem"
+                  fontsize768="4vw"
+                  color={`${this.props.theme.colors.grey[200]}`}
+                >
+                  Chronic
+                </Text>
+                <Text
+                  fontsize="2rem"
+                  fontsize="2rem"
+                  fontsize768="4vw"
+                  color={`${this.props.theme.colors.grey[200]}`}
+                >
+                  Illnesses
+                </Text>
+              </Box>
             </Box>
           </Column>
         </Section>
         <Section
+          height="600px"
+          height768="500px"
           margin="80px auto"
           maxwidth="960px"
           flexdirection960="row"
@@ -119,23 +188,49 @@ class Mission extends Component {
           <Column>
             <Text
               fontsize="1.5rem"
-              fontsize768="2rem"
+              lineheight="2rem"
               textalign="justify"
               textalign768="left"
               margin="0 auto"
             >
-              Lead and trihalomethanes, a bi product of chlorine disinfectant
-              has been found in our water, as well as arsenic, lead, chromium 6,
-              and perchlorate or otherwise known as rocket fuel around areas
-              near industrial zones with mines, factories and farmland. The
-              groundwater and run off water from these areas make their way into
-              our rivers and lakes, which we ultimately drink.
+              Lead and arsenic are bi-products of chlorine disinfectant and has
+              been found in{" "}
+              <span
+                style={{
+                  color: `${this.props.theme.colors.primary[500]}`,
+                  fontWeight: "900",
+                }}
+              >
+                groundwater
+              </span>{" "}
+              around industrial zones with mines, factories and farmland.
+            </Text>
+            <Pin margin="50px auto" />
+            <Text
+              fontsize="1.5rem"
+              lineheight="2rem"
+              textalign="justify"
+              textalign768="left"
+              margin="0 auto"
+            >
+              The
+              <span
+                style={{
+                  color: `${this.props.theme.colors.primary[500]}`,
+                  fontWeight: "900",
+                }}
+              >
+                {" "}
+                groundwater
+              </span>{" "}
+              from these areas make their way into our rivers and lakes, which
+              we ultimately drink.
             </Text>
           </Column>
         </Section>
         <Section
           background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509802571/about/waterPlant-v2.jpg') center/cover no-repeat"
-          backgroundattachment="scroll"
+          backgroundattachment="fixed"
           height="600px"
           margin="0 auto"
           flexdirection960="row"
@@ -153,17 +248,27 @@ class Mission extends Component {
           <Column>
             <Text
               fontsize="1.5rem"
-              fontsize768="2rem"
+              lineheight="2rem"
               textalign="justify"
               textalign768="left"
               margin="0 auto"
             >
               In large cities, drinking water is treated in sanitation systems
               which take waste water and process it to remove sand and dirt,
-              along with other contaminates. Governments spend billions of
-              dollars in sanitation systems annually. This process is not only
-              an extremely cost consuming procedure, it requires large amounts
-              of water and other resources to perform.
+              along with other contaminates.
+            </Text>
+            <Pin margin="50px auto" />
+            <Text
+              fontsize="1.5rem"
+              lineheight="2rem"
+              textalign="justify"
+              textalign768="left"
+              margin="0 auto"
+            >
+              Governments spend billions of dollars in sanitation systems
+              annually. This process is not only an extremely cost consuming
+              procedure, it requires large amounts of water and other resources
+              to perform.
             </Text>
           </Column>
         </Section>
@@ -183,71 +288,46 @@ class Mission extends Component {
               <Title
                 fontsize="4rem"
                 textalign768="center"
-                color="#273e63"
                 padding="20px 0 20px 30px"
               >
-                A 21st Century Solution
+                The 21st Century Solution
               </Title>
             </Box>
           </Column>
         </Section>
         <Section
+          height="600px"
           margin="0 auto"
           maxwidth="960px"
           padding="60px 0"
           flexdirection960="row"
+          width="80%"
         >
           <Column>
-            <Text fontsize="2rem" padding="0 2rem 2rem 2rem">
-              Solar Aquatic Solutions is trying to change all that. We have a
-              sanitation system designed to use less water, less money, and best
-              of all, less resources to transform waste water into safe,
-              drinkable water for everyone.
-            </Text>
-            <Text fontsize="2rem" padding="0 2rem 2rem 2rem">
-              By using renewable energy we are reducing greenhouse gases caused
-              by traditional desalination systems.
-            </Text>
-          </Column>
-        </Section>
-        <Section
-          background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509802490/about/mission-v2.jpg') center/cover no-repeat"
-          height="600px"
-        >
-          <Column display="block" height="100%">
-            <Box
-              position960="absolute"
-              textalign="center"
-              top="50px"
-              top768="130px"
-              left960="50%"
-              width="245px"
-              width768="600px"
-              fontsize="2rem"
-              fontsize768="1.5rem"
+            <Text
+              fontsize="1.5rem"
+              lineheight="2rem"
+              textalign="justify"
+              textalign768="left"
+              margin="0 auto"
             >
-              <Title
-                color="white"
-                fontsize="3rem"
-                textalign768="left"
-                padding="20px 0 20px 0"
-              >
-                Our Mission Statement
-              </Title>
-              <Text
-                color="white"
-                fontsize="1.5rem"
-                fontsize768="2rem"
-                textalign="justify"
-                textalign768="left"
-                margin="0 auto"
-              >
-                We believe that all individuals should have access to safe,
-                clean drinking water using only reliable and cost-effective
-                measures while preserving our world’s fresh water supplies and
-                precious natural resources.
-              </Text>
-            </Box>
+              We have a sanitation system designed to use less water, less
+              money, and best of all, less resources to transform waste water
+              into safe, drinkable water for everyone.
+            </Text>
+            <Pin margin="50px auto" />
+            <Text
+              fontsize="1.5rem"
+              lineheight="2rem"
+              textalign="justify"
+              textalign768="left"
+              margin="0 auto"
+            >
+              We believe that all individuals should have access to safe, clean
+              drinking water using only reliable and cost-effective measures
+              while preserving our world’s fresh water supplies and precious
+              natural resources.
+            </Text>
           </Column>
         </Section>
       </Wrapper>

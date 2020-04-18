@@ -6,8 +6,10 @@ const Text = styled.div`
   font-family: ${(props) => props.theme.typography.primaryFont};
   font-size: ${(props) => props.fontsize};
   font-weight: ${(props) => props.fontweight};
+  line-height: ${(props) => props.lineheight};
   margin: ${(props) => props.margin};
   padding: ${(props) => props.padding};
+  position: ${(props) => props.position};
   text-align: ${(props) => props.textalign};
   width: ${(props) => props.width};
 
