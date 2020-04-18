@@ -137,7 +137,7 @@ const FooterContainer = (props) => (
             Photography
           </Href>
         </Column>
-        <Column overflow="visible" width960="45%" alignitems960="flex-start">
+        <Column overflow="visible" width960="65%" alignitems960="flex-start">
           <Title
             padding="0"
             h6fontsize="1.5rem"
