@@ -26,13 +26,17 @@ const Section = styled.section`
   @media (min-width: 768px) {
     align-items: ${(props) => props.alignitems768};
     height: ${(props) => props.height768};
+    margin: ${(props) => props.margin768};
     max-width: ${(props) => props.maxwidth768};
+    width: ${(props) => props.width768};
   }
 
   @media (min-width: 960px) {
     flex-direction: ${(props) => props.flexdirection960};
     height: ${(props) => props.height960};
+    margin: ${(props) => props.margin960};
     max-width: ${(props) => props.maxwidth960};
+    width: ${(props) => props.width960};
   }
 `
 Section.defaultProps = {

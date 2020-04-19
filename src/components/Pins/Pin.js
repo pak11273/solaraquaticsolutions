@@ -2,7 +2,11 @@ import PinSrc from "src/assets/images/pin.png"
 import styled from "styled-components"
 
 export const Pin = styled.img`
+  display: ${(props) => props.display};
   margin: ${(props) => props.margin};
+  margin-bottom: ${(props) => props.marginbottom};
+  margin-left: ${(props) => props.marginleft};
+  margin-right: ${(props) => props.marginright};
   padding: ${(props) => props.padding};
   width: ${(props) => props.width};
   src: ${(props) => props.src};

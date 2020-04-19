@@ -3,6 +3,7 @@ import {
   Column,
   Img,
   Masthead,
+  Pin,
   Section,
   Subtitle,
   Text,
@@ -86,7 +87,8 @@ class Technology extends Component {
           <Section
             justifycontent="center"
             flexdirection768="row"
-            height="900px"
+            height="1500px"
+            height768="900px"
             margin768="50px 0"
             margin="0"
             maxwidth="1280px"
@@ -99,7 +101,9 @@ class Technology extends Component {
               >
                 Innovation
               </Title>
+              <Pin />
               <Subtitle
+                margin="20px 0 0 0"
                 fontsize="1.5rem"
                 lineheight="2rem"
                 padding="0 2rem 2rem 2rem"
@@ -221,76 +225,106 @@ class Technology extends Component {
             </Column>
           </Section>
           <Section>
-            <Column display="block">
-              <Img
-                float768="right"
-                width="300px"
-                height="300px"
-                width768="400px"
-                height768="400px"
-                background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509803602/technology/technology_panel-v2.jpg') center/cover no-repeat"
-                border="40px solid white"
-                borderradius="50%"
-                boxshadow="inset 0 0 0 2px #55657e"
-                margin="0 auto"
-                margin768="0 auto 40px"
-              />
-              <Title
-                fontsize="2.5rem"
-                textalign="center"
-                textalign768="left"
-                color="#273e63"
-                margin960="80px 0 0 0"
-                padding="20px 0 20px 30px"
-              >
-                Solar Thermal Collector
-              </Title>
-              <Text
-                fontsize="1.5rem"
-                padding="0 2rem 2rem 2rem"
-                textalign="justify"
-              >
-                Our troughs are built with high quality polished mirrors. The
-                mirrors concentrate the sun's heat to a tube filled with thermal
-                oil which absorbs the concentrated sunlight. This provides power
-                and thermal energy up to 400deg Celsius.
-              </Text>
+            <Column
+              display="flex"
+              height="800px"
+              height768="600px"
+              alignitems="center"
+              justifycontent="center"
+            >
+              <Box display="block">
+                <Img
+                  float768="right"
+                  width="300px"
+                  height="300px"
+                  width768="320px"
+                  height768="320px"
+                  background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509803602/technology/technology_panel-v2.jpg') center/cover no-repeat"
+                  border="40px solid white"
+                  borderradius="50%"
+                  boxshadow="inset 0 0 0 2px #55657e"
+                  margin="0 auto"
+                  margin768="0 auto 40px"
+                />
+                <Title
+                  fontsize="2.5rem"
+                  textalign="center"
+                  textalign768="left"
+                  margin960="80px 0 0 0"
+                  padding="20px 0 20px 30px"
+                >
+                  Solar Thermal Collector
+                </Title>
+                <Pin
+                  display="block"
+                  marginbottom="20px"
+                  marginleft="auto"
+                  marginright="auto"
+                  margin768="0 0 20px 200px"
+                />
+                <Text
+                  fontsize="1.5rem"
+                  padding="0 2rem 2rem 2rem"
+                  textalign="justify"
+                  width="100%"
+                  width768="60%"
+                >
+                  Our troughs are built with high quality polished mirrors. The
+                  mirrors concentrate the sun's heat to a tube filled with
+                  thermal oil which absorbs the concentrated sunlight. This
+                  provides power and thermal energy up to 400deg Celsius.
+                </Text>
+              </Box>
             </Column>
           </Section>
           <Section height="900px" height768="450px">
-            <Column display="block">
-              <Img
-                float768="left"
-                width="300px"
-                height="300px"
-                width768="450px"
-                height768="450px"
-                background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509803880/technology/natureCircle-v3.png') center/cover no-repeat"
-                border="40px solid white"
-                borderradius="50%"
-                margin="0 auto"
-                margin768="0 auto 40px"
-              />
-              <Title
-                fontsize="2.5rem"
-                textalign="center"
-                textalign768="left"
-                color="#273e63"
-                margin960="65px 0 0 0"
-                padding="20px 0 20px 30px"
-              >
-                Evaporation & Distillation System
-              </Title>
-              <Text
-                fontsize="1.5rem"
-                padding="0 2rem 2rem 2rem"
-                textalign="justify"
-              >
-                Our system reproduce's nature's natural water cycle. We
-                evaporate the source water being treated to 99.99% pure steam
-                and then condense the evaporated water back to pure fresh water
-                with less than 300 parts per million.
-              </Text>
+            <Column
+              display="flex"
+              height="800px"
+              height768="600px"
+              alignitems="center"
+              justifycontent="center"
+            >
+              <Box display="block">
+                <Img
+                  float768="left"
+                  width="300px"
+                  height="300px"
+                  width768="350px"
+                  height768="350px"
+                  background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509803880/technology/natureCircle-v3.png') center/cover no-repeat"
+                  border="40px solid white"
+                  borderradius="50%"
+                  margin="0 auto"
+                  margin768="0 60px 40px 0"
+                />
+                <Title
+                  fontsize="2.5rem"
+                  textalign="center"
+                  textalign768="left"
+                  margin960="65px 0 0 0"
+                  padding="20px 0 20px 30px"
+                >
+                  Evaporation & Distillation System
+                </Title>
+                <Pin
+                  display="block"
+                  marginbottom="20px"
+                  marginleft="auto"
+                  marginright="auto"
+                  margin768="0 0 20px 64%"
+                />
+                <Text
+                  fontsize="1.5rem"
+                  padding="0 2rem 2rem 2rem"
+                  textalign="justify"
+                >
+                  Our system reproduce's nature's natural water cycle. We
+                  evaporate the source water being treated to 99.99% pure steam
+                  and then condense the evaporated water back to pure fresh
+                  water with less than 300 parts per million.
+                </Text>
+              </Box>
             </Column>
           </Section>
           <Section
@@ -301,6 +335,7 @@ class Technology extends Component {
             width="300px"
             width768="600px"
             width960="900px"
+            margin768="100px auto 0"
           />
           <Section
             background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509803472/technology/waterSolution.svg') center/cover no-repeat"
@@ -311,6 +346,7 @@ class Technology extends Component {
             width="300px"
             width768="600px"
             width960="900px"
+            margin768="100px auto 0"
           />
           <Section
             background="url('https://res.cloudinary.com/sascloudinary/image/upload/v1509803521/technology/sanitationSolution.svg') center/cover no-repeat"
