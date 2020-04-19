@@ -38,16 +38,60 @@ class Technology extends Component {
             href="https://solaraquaticsolutions.world/technology"
           />
         </Helmet>
+        <Masthead
+          background="url('https://images.unsplash.com/photo-1573486379682-bd15169ab5dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80') center/cover no-repeat"
+          height="787px"
+          width="100%"
+        >
+          <Column
+            alignself="center"
+            height="300px"
+            justifycontent="flex-start"
+            width960="960px"
+          >
+            <Box
+              justifycontent="flex-start"
+              margin="60px 0 0 20px"
+              margin768="60px 0 0 0"
+            >
+              <Title
+                h1fontsize="4rem"
+                h1lineheight="1.8rem"
+                h2fontsize="4rem"
+                padding="0"
+                textalign="left"
+              >
+                <h1>Our</h1>
+                <h2>Process</h2>
+              </Title>
+              <Subtitle
+                color={`${this.props.theme.colors.grey[200]}`}
+                display="none"
+                display768="flex"
+                fontsize="1.5rem"
+                fontweight="100"
+                lineheight="1.5rem"
+                margin="40px 0 0 0"
+                textalign="left"
+              >
+                Sustainable. Scalable.
+              </Subtitle>
+            </Box>
+          </Column>
+        </Masthead>
         <Column margin="0 auto" maxwidth="960px">
-          <Masthead>
+          <Section
+            height="800px"
+            height768="500px"
+            style={{ justifyContent: "center" }}
+          >
             <Column>
               <Title
                 fontsize="3rem"
                 textalign768="center"
-                color="#273e63"
                 padding="20px 0 20px 30px"
               >
-                Our Process
+                Innovation
               </Title>
               <Subtitle
                 fontsize="1.5rem"
@@ -56,16 +100,26 @@ class Technology extends Component {
                 textalign768="left"
               >
                 We use a new and innovative strategy to purifying water with
-                solar thermal energy. This system provides low cost expenses
-                without the traditional costs current and historical methods
-                incur such as membrane systems and reverse osmosis. Our process
-                has been tried and tested and proven highly successful. Not only
-                do we produce better quality water, but we also help with the
-                growing global problems of water scarcity and waste water
-                sanitization.
+                solar thermal energy.{" "}
               </Subtitle>
             </Column>
-          </Masthead>
+            <Column flexdirection="row">
+              <Box>
+                This system provides low cost expenses without the traditional
+                costs current and historical methods incur such as membrane
+                systems and reverse osmosis.
+              </Box>
+              <Box>
+                Our process has been tried and tested and proven highly
+                successful.
+              </Box>
+              <Box>
+                Not only do we produce better quality water, but we also help
+                with the growing global problems of water scarcity and waste
+                water sanitization.
+              </Box>
+            </Column>
+          </Section>
           <Section>
             <Column display="block">
               <Img

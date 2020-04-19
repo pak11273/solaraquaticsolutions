@@ -1,7 +1,8 @@
+import { Box, Column, Section, Text, Title, Wrapper } from "../components"
 import React, { Component } from "react"
+
 import { Helmet } from "react-helmet"
 
-import { Wrapper, Section, Box, Column, Text, Title } from "../components"
 class About extends Component {
   render() {
     return (
@@ -136,3 +137,6 @@ class About extends Component {
 }
 
 export default About
+
+//Photo by Science in HD on Unsplash - Technology mast
+//Photo by Johnny McClung on Unsplash - Passion mast

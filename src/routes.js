@@ -30,7 +30,7 @@ export const routes = [
     loadData: () => getSomeData(),
   },
   {
-    path: "/Our Mission",
+    path: "/Mission",
     component: (props) => <Mission theme={theme} {...props} />,
     loadData: () => getSomeData(),
   },

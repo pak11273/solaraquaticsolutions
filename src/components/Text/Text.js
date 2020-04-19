@@ -1,4 +1,3 @@
-import React from "react"
 import styled from "styled-components"
 
 const Text = styled.div`
@@ -11,11 +10,13 @@ const Text = styled.div`
   padding: ${(props) => props.padding};
   position: ${(props) => props.position};
   text-align: ${(props) => props.textalign};
+  text-shadow: ${(props) => props.textshadow};
   width: ${(props) => props.width};
 
   @media (min-width: 768px) {
     font-size: ${(props) => props.fontsize768};
     text-align: ${(props) => props.textalign768};
+    width: ${(props) => props.width768};
   }
 `
 Text.defaultProps = {
