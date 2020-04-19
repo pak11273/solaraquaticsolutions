@@ -5,10 +5,13 @@ import styled from "styled-components"
 const Container = styled.section`
   align-items: ${(props) => props.alignitems};
   background: ${(props) => props.background};
+  border-color: ${(props) => props.bordercolor};
   border-top: ${(props) => props.bordertop};
   border-bottom: ${(props) => props.borderbottom};
   border-left: ${(props) => props.borderleft};
+  border-radius: ${(props) => props.borderradius};
   border-right: ${(props) => props.borderright};
+  border-width: ${(props) => props.borderwidth};
   box-sizing: border-box;
   display: ${(props) => props.display};
   flex-direction: ${(props) => props.flexdirection};
@@ -22,7 +25,6 @@ const Container = styled.section`
   position: ${(props) => props.position};
   top: ${(props) => props.top};
   left: ${(props) => props.left};
-  radius: ${(props) => props.borderradius};
   right: ${(props) => props.right};
   bottom: ${(props) => props.bottom};
   text-align: ${(props) => props.textalign};

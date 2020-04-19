@@ -13,9 +13,12 @@ import React, { Component } from "react"
 import styled, { ThemeProvider } from "styled-components"
 
 import Article from "../containers/Articles/Article.js"
+import GridPic from "../../src/assets/images/technology/grid.jpg"
 import { Helmet } from "react-helmet"
 import Line from "../components/Lines/Line.js"
 import Navbar from "../containers/Navbars/Navbar"
+import PlugPic from "../../src/assets/images/technology/plug.jpg"
+import ProhibitPic from "../../src/assets/images/technology/prohibit.png"
 import { toggleDropdown } from "../containers/Navbars/Navbar/actions.js"
 
 // actions
@@ -81,9 +84,12 @@ class Technology extends Component {
         </Masthead>
         <Column margin="0 auto" maxwidth="960px">
           <Section
-            height="800px"
-            height768="500px"
-            style={{ justifyContent: "center" }}
+            justifycontent="center"
+            flexdirection768="row"
+            height="900px"
+            margin768="50px 0"
+            margin="0"
+            maxwidth="1280px"
           >
             <Column>
               <Title
@@ -95,28 +101,122 @@ class Technology extends Component {
               </Title>
               <Subtitle
                 fontsize="1.5rem"
+                lineheight="2rem"
                 padding="0 2rem 2rem 2rem"
                 textalign="justify"
                 textalign768="left"
               >
                 We use a new and innovative strategy to purifying water with
-                solar thermal energy.{" "}
+                solar thermal energy. All of our systems are 100% environment
+                friendly and we use suppliers who are Green Certified.
               </Subtitle>
             </Column>
-            <Column flexdirection="row">
-              <Box>
-                This system provides low cost expenses without the traditional
-                costs current and historical methods incur such as membrane
-                systems and reverse osmosis.
+            <Column flexdirection768="row">
+              <Box margin="0 30px 30px 30px">
+                <Img
+                  backgroundimage={`url(${ProhibitPic})`}
+                  backgroundsize="cover"
+                  borderradius="50%"
+                  bordercolor={`${this.props.theme.colors.primary[700]}`}
+                  borderwidth="4px"
+                  position="absolute"
+                  top="4px"
+                  height="200px"
+                  width="200px"
+                  height768="250px"
+                  width768="250px"
+                />
+                <Img
+                  backgroundimage={`url(${GridPic})`}
+                  borderradius="50%"
+                  bordercolor={`${this.props.theme.colors.primary[700]}`}
+                  borderwidth="4px"
+                  height="200px"
+                  width="200px"
+                  height768="250px"
+                  width768="250px"
+                />
+                <Text
+                  fontsize="1.6rem"
+                  color={`${this.props.theme.colors.primary[700]}`}
+                  fontweight="800"
+                  padding="1rem"
+                  textalign="center"
+                  texttransform="uppercase"
+                >
+                  No Membrane Plates
+                </Text>
               </Box>
-              <Box>
-                Our process has been tried and tested and proven highly
-                successful.
+              <Box margin="0 30px 30px 30px">
+                <Img
+                  backgroundimage={`url(${ProhibitPic})`}
+                  backgroundsize="cover"
+                  borderradius="50%"
+                  bordercolor={`${this.props.theme.colors.primary[700]}`}
+                  borderwidth="4px"
+                  position="absolute"
+                  top="4px"
+                  height="200px"
+                  width="200px"
+                  height768="250px"
+                  width768="250px"
+                />
+                <Img
+                  background="url('https://images.unsplash.com/photo-1581091158453-fbd70112d19b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80') center/cover no-repeat"
+                  borderradius="50%"
+                  bordercolor={`${this.props.theme.colors.primary[700]}`}
+                  borderwidth="4px"
+                  height="200px"
+                  width="200px"
+                  height768="250px"
+                  width768="250px"
+                />
+                <Text
+                  fontsize="1.6rem"
+                  color={`${this.props.theme.colors.primary[700]}`}
+                  fontweight="800"
+                  padding="1rem"
+                  textalign="center"
+                  texttransform="uppercase"
+                >
+                  No Chemical Treatments
+                </Text>
               </Box>
-              <Box>
-                Not only do we produce better quality water, but we also help
-                with the growing global problems of water scarcity and waste
-                water sanitization.
+              <Box margin="0 30px 30px 30px">
+                <Img
+                  backgroundimage={`url(${ProhibitPic})`}
+                  backgroundsize="cover"
+                  borderradius="50%"
+                  bordercolor={`${this.props.theme.colors.primary[700]}`}
+                  borderwidth="4px"
+                  position="absolute"
+                  top="4px"
+                  height="200px"
+                  width="200px"
+                  height768="250px"
+                  width768="250px"
+                />
+                <Img
+                  backgroundimage={`url(${PlugPic})`}
+                  backgroundsize="cover"
+                  borderradius="50%"
+                  bordercolor={`${this.props.theme.colors.primary[700]}`}
+                  borderwidth="4px"
+                  height="200px"
+                  width="200px"
+                  height768="250px"
+                  width768="250px"
+                />
+                <Text
+                  fontsize="1.6rem"
+                  color={`${this.props.theme.colors.primary[700]}`}
+                  fontweight="800"
+                  padding="1rem"
+                  textalign="center"
+                  texttransform="uppercase"
+                >
+                  Solar Powered Technology
+                </Text>
               </Box>
             </Column>
           </Section>
