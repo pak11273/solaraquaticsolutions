@@ -48,9 +48,9 @@ GalleryImg.defaultProps = {
   border: "0",
   float: "none",
   postion: "relative",
-  borderradius: "3px",
+  borderradius: "50%",
   width: "300px",
-  height: "300px",
+  height: "400px",
   minwidth768: "400px",
   border: "40px solid white",
   boxshadow: "inset 0 0 0 2px #55657e",
@@ -79,13 +79,12 @@ class Gallery extends Component {
             href="https://solaraquaticsolutions.world/gallery"
           />
         </Helmet>
-        <Section flexdirection="column">
+        <Section margin="100px 0 0 0" flexdirection="column">
           <Column>
             <Box>
               <Title
                 fontsize="3rem"
                 textalign768="center"
-                color="#273e63"
                 padding="20px 0 20px 30px"
               >
                 South American Projects
@@ -93,7 +92,7 @@ class Gallery extends Component {
             </Box>
           </Column>
         </Section>
-        <Section maxwidth="960px">
+        <Section maxwidth="960px" margin="0 auto 200px">
           <Column
             alignitems="center"
             flexdirection768="row"
