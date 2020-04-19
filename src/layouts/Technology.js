@@ -2,6 +2,7 @@ import {
   Box,
   Column,
   Img,
+  Masthead,
   Section,
   Subtitle,
   Text,
@@ -18,7 +19,6 @@ import Navbar from "../containers/Navbars/Navbar"
 import { toggleDropdown } from "../containers/Navbars/Navbar/actions.js"
 
 // actions
-
 
 class Technology extends Component {
   render() {
@@ -39,7 +39,7 @@ class Technology extends Component {
           />
         </Helmet>
         <Column margin="0 auto" maxwidth="960px">
-          <Section>
+          <Masthead>
             <Column>
               <Title
                 fontsize="3rem"
@@ -47,7 +47,7 @@ class Technology extends Component {
                 color="#273e63"
                 padding="20px 0 20px 30px"
               >
-                What we do
+                Our Process
               </Title>
               <Subtitle
                 fontsize="1.5rem"
@@ -65,7 +65,7 @@ class Technology extends Component {
                 sanitization.
               </Subtitle>
             </Column>
-          </Section>
+          </Masthead>
           <Section>
             <Column display="block">
               <Img

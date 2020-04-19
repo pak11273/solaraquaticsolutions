@@ -15,6 +15,7 @@ const Text = styled.div`
 
   @media (min-width: 768px) {
     font-size: ${(props) => props.fontsize768};
+    text-align: ${(props) => props.textalign768};
   }
 `
 Text.defaultProps = {

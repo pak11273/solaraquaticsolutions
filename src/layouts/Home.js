@@ -4,15 +4,16 @@ import {
   Column,
   Img,
   Logo,
+  Masthead,
   Pin,
   Section,
   Subtitle,
   Text,
   Title,
 } from "../components"
-import { CTAForm, Masthead } from "../containers"
 import React, { Component } from "react"
 
+import { CTAForm } from "../containers"
 import Graphic from "src/assets/images/logo-v3.svg"
 import { Helmet } from "react-helmet"
 import { Sphere } from "@styled-icons/icomoon"

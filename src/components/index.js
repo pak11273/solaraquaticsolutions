@@ -5,6 +5,7 @@ import Column from "./Columns/Column.js"
 import Img from "./Img.js"
 import InputLine from "./InputLine.js"
 import Logo from "./Logos/Logo.js"
+import Masthead from "./Mastheads/Masthead.js"
 import { Pin } from "./Pins/Pin"
 import Row from "./Row.js"
 import ScrollToTop from "./ScrollToTop.js"
@@ -23,6 +24,7 @@ export {
   Img,
   InputLine,
   Logo,
+  Masthead,
   Pin,
   Row,
   ScrollToTop,
