@@ -264,8 +264,9 @@ class Technology extends Component {
                 />
                 <Text
                   fontsize="1.5rem"
+                  lineheight="2rem"
                   padding="0 2rem 2rem 2rem"
-                  textalign="justify"
+                  textalign="left"
                   width="100%"
                   width768="60%"
                 >
@@ -316,8 +317,10 @@ class Technology extends Component {
                 />
                 <Text
                   fontsize="1.5rem"
+                  lineheight="2rem"
+                  textalign="left"
                   padding="0 2rem 2rem 2rem"
-                  textalign="justify"
+                  textalign="left"
                 >
                   Our system reproduce's nature's natural water cycle. We
                   evaporate the source water being treated to 99.99% pure steam
