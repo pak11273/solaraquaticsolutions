@@ -2,6 +2,7 @@ import "./select.css"
 
 import {
   Box,
+  Button,
   Column,
   InputLine,
   Row,
@@ -12,7 +13,6 @@ import { PhoneNumberFormat, PhoneNumberUtil } from "google-libphonenumber"
 import React, { Component } from "react"
 import styled, { ThemeProvider } from "styled-components"
 
-import Button from "../../../components/Buttons/Button.js"
 import CallingCodes from "../../../assets/js/CallingCodes.js"
 import { FaEnvelopeOpen } from "react-icons/fa"
 import FaQuestion from "react-icons/fa"
@@ -620,6 +620,7 @@ class ContactForm extends Component {
               <Button
                 alignself="flex-end"
                 bottom="-60px"
+                padding="10px 0 10px 0"
                 right="-6px"
                 margin="80px 0 0 0"
                 width="100px"

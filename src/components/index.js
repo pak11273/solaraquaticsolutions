@@ -1,5 +1,5 @@
 import { Box } from "./Boxes/Box.js"
-import Button from "./Button.js"
+import Button from "./Buttons/Button.js"
 import CTA from "./CTA.js"
 import Column from "./Columns/Column.js"
 import Img from "./Img.js"
