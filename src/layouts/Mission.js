@@ -175,8 +175,7 @@ class Mission extends Component {
             <Text
               fontsize="1.5rem"
               lineheight="2rem"
-              textalign="justify"
-              textalign768="left"
+              textalign="center"
               margin="0 auto"
             >
               Around the world civilizations experience natural disasters that
@@ -187,8 +186,7 @@ class Mission extends Component {
             <Text
               fontsize="1.5rem"
               lineheight="2rem"
-              textalign="justify"
-              textalign768="left"
+              textalign="center"
               margin="0 auto"
             >
               Mankind is forced to take unnatural means by channeling water from
@@ -258,42 +256,22 @@ class Mission extends Component {
             <Text
               fontsize="1.5rem"
               lineheight="2rem"
-              textalign="justify"
-              textalign768="left"
+              textalign="center"
               margin="0 auto"
             >
               Lead and arsenic are bi-products of chlorine disinfectant and has
-              been found in{" "}
-              <span
-                style={{
-                  color: `${this.props.theme.colors.primary[500]}`,
-                  fontWeight: "900",
-                }}
-              >
-                groundwater
-              </span>{" "}
-              around industrial zones with mines, factories and farmland.
+              been found in groundwater around industrial zones with mines,
+              factories and farmland.
             </Text>
             <Pin margin="50px auto" />
             <Text
               fontsize="1.5rem"
               lineheight="2rem"
-              textalign="justify"
-              textalign768="left"
+              textalign="center"
               margin="0 auto"
             >
-              The
-              <span
-                style={{
-                  color: `${this.props.theme.colors.primary[500]}`,
-                  fontWeight: "900",
-                }}
-              >
-                {" "}
-                groundwater
-              </span>{" "}
-              from these areas make their way into our rivers and lakes, which
-              we ultimately drink.
+              The groundwater from these areas make their way into our rivers
+              and lakes, which we ultimately drink.
             </Text>
           </Column>
         </Section>
@@ -309,7 +287,8 @@ class Mission extends Component {
           </Column>
         </Section>
         <Section
-          margin="80px auto"
+          margin="100px auto"
+          margin768="200px auto"
           maxwidth="960px"
           flexdirection960="row"
           width="80%"
@@ -318,8 +297,7 @@ class Mission extends Component {
             <Text
               fontsize="1.5rem"
               lineheight="2rem"
-              textalign="justify"
-              textalign768="left"
+              textalign="center"
               margin="0 auto"
             >
               In large cities, drinking water is treated in sanitation systems
@@ -330,8 +308,7 @@ class Mission extends Component {
             <Text
               fontsize="1.5rem"
               lineheight="2rem"
-              textalign="justify"
-              textalign768="left"
+              textalign="center"
               margin="0 auto"
             >
               Governments spend billions of dollars in sanitation systems
@@ -392,8 +369,7 @@ class Mission extends Component {
             <Text
               fontsize="1.5rem"
               lineheight="2rem"
-              textalign="justify"
-              textalign768="left"
+              textalign="center"
               margin="0 auto"
             >
               We have a sanitation system designed to use less water, less
@@ -404,8 +380,7 @@ class Mission extends Component {
             <Text
               fontsize="1.5rem"
               lineheight="2rem"
-              textalign="justify"
-              textalign768="left"
+              textalign="center"
               margin="0 auto"
             >
               We believe that all individuals should have access to safe, clean

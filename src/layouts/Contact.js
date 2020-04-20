@@ -47,7 +47,7 @@ class Contact extends Component {
             administrativeAssistantPhone="(+1) 972 213 7123"
             administrativeAssistantEmail="admin@solaraquaticsolutions.world"
             marketingManager="Isaac Pak"
-            marketingManagerTitle="MarketingManager"
+            marketingManagerTitle="Marketing Manager"
             marketingManagerPhone="(+1) 430 201 3940"
             marketingManagerEmail="isaac.pak@solaraquaticsolutions.world"
             attorneyAtLaw="William Rodriguez"

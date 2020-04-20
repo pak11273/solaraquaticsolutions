@@ -59,6 +59,11 @@ const Form = styled.form`
   position: ${(props) => props.position};
   width: ${(props) => props.width};
 
+  a {
+    display: inline-block;
+    margin-top: 8px;
+  }
+
   @media (min-width: 768px) {
     display: flex;
     flex-direction: ${(props) => props.flexdirection768};
@@ -180,15 +185,9 @@ class ContactForm extends Component {
   }
 
   onSelect2(cntrObj) {
-    this.setState(
-      {
-        country: cntrObj.value,
-      },
-      () => {
-        console.log("ob", cntrObj)
-        console.log("state", this.state)
-      }
-    )
+    this.setState({
+      country: cntrObj.value,
+    })
     this.validatePhoneNumber("+" + cntrObj.value + " " + this.state.number)
   }
 
