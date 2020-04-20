@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/solaraquaticsolutions/static/css/main.7f97bfa0.chunk.css",
-    "main.js": "/solaraquaticsolutions/static/js/main.7cbbcd98.chunk.js",
-    "main.js.map": "/solaraquaticsolutions/static/js/main.7cbbcd98.chunk.js.map",
+    "main.js": "/solaraquaticsolutions/static/js/main.d230f8cc.chunk.js",
+    "main.js.map": "/solaraquaticsolutions/static/js/main.d230f8cc.chunk.js.map",
     "runtime-main.js": "/solaraquaticsolutions/static/js/runtime-main.bee297db.js",
     "runtime-main.js.map": "/solaraquaticsolutions/static/js/runtime-main.bee297db.js.map",
     "static/js/2.468fb24c.chunk.js": "/solaraquaticsolutions/static/js/2.468fb24c.chunk.js",
     "static/js/2.468fb24c.chunk.js.map": "/solaraquaticsolutions/static/js/2.468fb24c.chunk.js.map",
     "index.html": "/solaraquaticsolutions/index.html",
-    "precache-manifest.41b471b1ffa7effd3fe6f59325a17775.js": "/solaraquaticsolutions/precache-manifest.41b471b1ffa7effd3fe6f59325a17775.js",
+    "precache-manifest.022ae0fdc8184a475beb466119e093ed.js": "/solaraquaticsolutions/precache-manifest.022ae0fdc8184a475beb466119e093ed.js",
     "service-worker.js": "/solaraquaticsolutions/service-worker.js",
     "static/css/main.7f97bfa0.chunk.css.map": "/solaraquaticsolutions/static/css/main.7f97bfa0.chunk.css.map",
     "static/js/2.468fb24c.chunk.js.LICENSE.txt": "/solaraquaticsolutions/static/js/2.468fb24c.chunk.js.LICENSE.txt",
@@ -22,6 +22,6 @@
     "static/js/runtime-main.bee297db.js",
     "static/js/2.468fb24c.chunk.js",
     "static/css/main.7f97bfa0.chunk.css",
-    "static/js/main.7cbbcd98.chunk.js"
+    "static/js/main.d230f8cc.chunk.js"
   ]
 }
