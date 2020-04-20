@@ -1,12 +1,13 @@
 import React, { Component } from "react"
-import { Helmet } from "react-helmet"
-import styled, { ThemeProvider } from "styled-components"
 import { Section, Wrapper } from "../components"
-import Navbar from "../containers/Navbars/Navbar"
-import Title from "../components/Text/Title.js"
-import Text from "../components/Text/Text.js"
-import Subtitle from "../components/Text/Subtitle.js"
+import styled, { ThemeProvider } from "styled-components"
+
 import ContactForm from "../containers/Forms/ContactForm/ContactForm.js"
+import { Helmet } from "react-helmet"
+import Navbar from "../containers/Navbars/Navbar"
+import Subtitle from "../components/Text/Subtitle.js"
+import Text from "../components/Text/Text.js"
+import Title from "../components/Text/Title.js"
 import { connect } from "react-redux"
 import { sendmail } from "../actions/sendmailActions"
 
@@ -31,6 +32,7 @@ class Contact extends Component {
         </Helmet>
         <Section>
           <ContactForm
+            {...this.props}
             sendmail={sendmail}
             managingDirector="David Pak"
             managingDirectorTitle="Managing Director"

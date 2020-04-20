@@ -1,46 +1,48 @@
-import React, { Component } from "react"
+import "./select.css"
+
 import {
   Box,
   Column,
   InputLine,
   Row,
+  Subtitle,
   Title,
-  Subtitle
 } from "../../../components"
-import Label from "../../../components/Text/Label.js"
-import Button from "../../../components/Buttons/Button.js"
-import styled, { ThemeProvider } from "styled-components"
-import Select from "react-select"
 import { PhoneNumberFormat, PhoneNumberUtil } from "google-libphonenumber"
+import React, { Component } from "react"
+import styled, { ThemeProvider } from "styled-components"
+
+import Button from "../../../components/Buttons/Button.js"
 import CallingCodes from "../../../assets/js/CallingCodes.js"
-import "./select.css"
-import FaQuestion from "react-icons/fa"
 import { FaEnvelopeOpen } from "react-icons/fa"
+import FaQuestion from "react-icons/fa"
 import { FaReply } from "react-icons/fa"
 import { FaUser } from "react-icons/fa" // import { FaBeer } from 'react-icons/fa';
+import Label from "../../../components/Text/Label.js"
+import Select from "react-select"
 
 const Role = styled.div`
-  color: ${props => props.color};
-  font-size: ${props => props.fontsize};
-  font-weight: ${props => props.fontweight};
-  padding: ${props => props.padding};
-  text-align: ${props => props.textalign};
-  text-shadow: ${props => props.textshadow};
+  color: ${(props) => props.color};
+  font-size: ${(props) => props.fontsize};
+  font-weight: ${(props) => props.fontweight};
+  padding: ${(props) => props.padding};
+  text-align: ${(props) => props.textalign};
+  text-shadow: ${(props) => props.textshadow};
 `
 
 Role.defaultProps = {
-  color: "blue",
+  color: (props) => props.theme.colors.primaryText,
   fontsize: "2rem",
   fontweight: "600",
   padding: "0 0 20px 0",
   textalign: "left",
-  textshadow: "0 0 0 0"
+  textshadow: "0 0 0 0",
 }
 
 const Phone = styled.div`
   align-self: flex-start;
   display: flex;
-  width: 100%;
+  width: "100%";
 `
 const Message = styled.div`
   font-weight: bold;
@@ -50,33 +52,33 @@ const Form = styled.form`
   align-items: center;
   box-sizing: border-box;
   display: flex;
-  flex-direction: ${props => props.flexdirection};
-  height: ${props => props.height};
+  flex-direction: ${(props) => props.flexdirection};
+  height: ${(props) => props.height};
   justify-content: center;
   overflow: hidden;
-  position: ${props => props.position};
-  width: ${props => props.width};
+  position: ${(props) => props.position};
+  width: ${(props) => props.width};
 
   @media (min-width: 768px) {
     display: flex;
-    flex-direction: ${props => props.flexdirection768};
+    flex-direction: ${(props) => props.flexdirection768};
     justify-content: center;
   }
 `
 Form.defaultProps = {
   flexdirection: "column",
   position: "relative",
-  width: "100%"
+  width: "100%",
 }
 
 const Rightside = styled.div`
   display: flex;
   flex-direction: column;
-  height: ${props => props.height};
+  height: ${(props) => props.height};
   justify-content: space-between;
-  padding: ${props => props.padding};
-  position: ${props => props.position};
-  width: ${props => props.width};
+  padding: ${(props) => props.padding};
+  position: ${(props) => props.position};
+  width: ${(props) => props.width};
 
   @media (min-width: 768px) {
     padding: 5rem 0;
@@ -85,37 +87,65 @@ const Rightside = styled.div`
 Rightside.defaultProps = {
   padding: "0 0 5rem 0",
   position: "relative",
-  width: "50%"
+  width: "50%",
 }
 
 const MsgBox = styled.textarea`
-  height: ${props => props.height};
+  height: ${(props) => props.height};
   margin: 0 auto;
-  width: ${props => props.width};
+  width: ${(props) => props.width};
 `
 MsgBox.defaultProps = {
   height: "300px",
-  width: "100%"
+  width: "100%",
 }
 
 const Closing = styled.div`
-  color: ${props => props.color};
+  color: ${(props) => props.color};
   text-align: right;
   margin-right: 130px;
 `
 Closing.defaultProps = {
-  color: props => props.theme.color
+  color: (props) => props.theme.color,
 }
 
 const Signature = styled.div`
-  color: ${props => props.color};
-  font-size: ${props => props.fontsize};
+  color: ${(props) => props.color};
+  font-size: ${(props) => props.fontsize};
   margin-right: 50px;
   text-align: right;
 `
 Signature.defaultProps = {
-  color: props => props.theme.color,
-  fontsize: "1rem"
+  color: (props) => props.theme.color,
+  fontsize: "1rem",
+}
+
+const customStyles = {
+  container: (provided, state) => ({
+    width: 200,
+  }),
+  // option: (provided, state) => ({
+  //   ...provided,
+  //   borderBottom: "1px dotted gray",
+  //   color: state.isSelected ? "red" : "blue",
+  //   padding: 20,
+  // }),
+  // menu: (provided, state) => ({
+  //   ...provided,
+  //   width: "200px",
+  //   borderBottom: "1px dotted pink",
+  //   color: "red",
+  //   padding: 20,
+  // }),
+  // control: () => ({
+  //   // none of react-select's styles are passed to <Control />
+  //   width: 200,
+  // }),
+  // singleValue: (provided, state) => {
+  //   const opacity = state.isDisabled ? 0.5 : 1
+  //   const transition = "opacity 300ms"
+  //   return { ...provided, opacity, transition }
+  // },
 }
 
 class ContactForm extends Component {
@@ -129,7 +159,7 @@ class ContactForm extends Component {
       subject: "",
       letter: "",
       message: "",
-      timezone: "Puerto Rico (Atlantic) America/Puerto_Rico"
+      timezone: "Puerto Rico (Atlantic) America/Puerto_Rico",
     }
 
     this.onChange = this.onChange.bind(this)
@@ -142,7 +172,7 @@ class ContactForm extends Component {
     const name = e.target.name
     const value = e.target.value
     this.setState({
-      [name]: value
+      [name]: value,
     })
     if (e.target.name === "number") {
       this.validatePhoneNumber("+" + this.state.country + " " + e.target.value)
@@ -150,9 +180,15 @@ class ContactForm extends Component {
   }
 
   onSelect2(cntrObj) {
-    this.setState({
-      country: cntrObj.value
-    })
+    this.setState(
+      {
+        country: cntrObj.value,
+      },
+      () => {
+        console.log("ob", cntrObj)
+        console.log("state", this.state)
+      }
+    )
     this.validatePhoneNumber("+" + cntrObj.value + " " + this.state.number)
   }
 
@@ -176,12 +212,12 @@ class ContactForm extends Component {
       this.setState({
         message:
           "Phone number " + this.getValidNumber(phoneNumber) + " is valid",
-        color: "green"
+        color: "green",
       })
     } else {
       this.setState({
         message: "Phone number " + phoneNumber + " is not valid",
-        color: "red"
+        color: "red",
       })
     }
   }
@@ -192,14 +228,14 @@ class ContactForm extends Component {
     return phoneUtil.format(parsedNumber, PhoneNumberFormat.INTERNATIONAL)
   }
 
-  render(props) {
+  render() {
     return (
       <Form onSubmit={this.onSubmit}>
         <Row>
           <Title
-            color="#273e63"
             fontsize="2.5rem"
-            margin="70px 0 0 20px"
+            margin="70px 0 0 0"
+            padding="0 0 0 20px"
             textalign="left"
           >
             Global Contacts
@@ -219,7 +255,7 @@ class ContactForm extends Component {
                   style={{
                     fontsize: "1.3rem",
                     verticalalign: "top",
-                    color: "blue"
+                    color: this.props.theme.colors.primaryText,
                   }}
                 />{" "}
                 {this.props.managingDirectorTitle}
@@ -236,13 +272,13 @@ class ContactForm extends Component {
               >
                 {this.props.managingDirectorEmail}
               </a>
-              <Title
-                color="#333"
-                padding="30px 0 10px 0"
-                textalign="left"
-                fontsize="1.3rem"
-              >
-                <FaUser style={{ verticalAlign: "top", color: "blue" }} />{" "}
+              <Title padding="30px 0 10px 0" textalign="left" fontsize="1.3rem">
+                <FaUser
+                  style={{
+                    verticalAlign: "top",
+                    color: this.props.theme.colors.primaryText,
+                  }}
+                />{" "}
                 {this.props.projectManagerTitle}
               </Title>
               <Subtitle fontsize="1.7rem" textalign="left">
@@ -257,13 +293,13 @@ class ContactForm extends Component {
               >
                 {this.props.projectManagerEmail}
               </a>
-              <Title
-                color="#333"
-                padding="30px 0 10px 0"
-                textalign="left"
-                fontsize="1.3rem"
-              >
-                <FaUser style={{ verticalAlign: "top", color: "blue" }} />{" "}
+              <Title padding="30px 0 10px 0" textalign="left" fontsize="1.3rem">
+                <FaUser
+                  style={{
+                    verticalAlign: "top",
+                    color: this.props.theme.colors.primaryText,
+                  }}
+                />{" "}
                 {this.props.administrativeAssistantTitle}
               </Title>
               <Subtitle fontsize="1.7rem" textalign="left">
@@ -278,13 +314,13 @@ class ContactForm extends Component {
               >
                 {this.props.administrativeAssistantEmail}
               </a>
-              <Title
-                color="#333"
-                padding="30px 0 10px 0"
-                textalign="left"
-                fontsize="1.3rem"
-              >
-                <FaUser style={{ verticalAlign: "top", color: "blue" }} />{" "}
+              <Title padding="30px 0 10px 0" textalign="left" fontsize="1.3rem">
+                <FaUser
+                  style={{
+                    verticalAlign: "top",
+                    color: this.props.theme.colors.primaryText,
+                  }}
+                />{" "}
                 {this.props.marketingManagerTitle}
               </Title>
               <Subtitle fontsize="1.7rem" textalign="left">
@@ -299,14 +335,12 @@ class ContactForm extends Component {
               >
                 {this.props.marketingManagerEmail}
               </a>
-              <Title
-                color="#333"
-                padding="50px 0 10px 0"
-                textalign="left"
-                fontsize="1.3rem"
-              >
+              <Title padding="50px 0 10px 0" textalign="left" fontsize="1.3rem">
                 <FaEnvelopeOpen
-                  style={{ verticalAlign: "top", color: "blue" }}
+                  style={{
+                    verticalAlign: "top",
+                    color: this.props.theme.colors.primaryText,
+                  }}
                 />{" "}
                 {this.props.mailingTitle}
               </Title>
@@ -316,13 +350,13 @@ class ContactForm extends Component {
               <Subtitle fontsize="1.5rem" textalign="left">
                 {this.props.state}
               </Subtitle>
-              <Title
-                color="#333"
-                padding="50px 0 10px 0"
-                textalign="left"
-                fontsize="1.3rem"
-              >
-                <FaReply style={{ verticalAlign: "top", color: "blue" }} />{" "}
+              <Title padding="50px 0 10px 0" textalign="left" fontsize="1.3rem">
+                <FaReply
+                  style={{
+                    verticalAlign: "top",
+                    color: this.props.theme.colors.primaryText,
+                  }}
+                />{" "}
                 {this.props.emailTitle}
               </Title>
               <a
@@ -336,17 +370,12 @@ class ContactForm extends Component {
           <Column justifycontent="flex-start" minwidth="360px" maxwidth="360px">
             <div>
               <Role>Peru</Role>
-              <Title
-                color="#333"
-                padding="0 0 10px 0"
-                textalign="left"
-                fontsize="1.3rem"
-              >
+              <Title padding="0 0 10px 0" textalign="left" fontsize="1.3rem">
                 <FaUser
                   style={{
                     fontsize: "1.3rem",
                     verticalalign: "top",
-                    color: "blue"
+                    color: this.props.theme.colors.primaryText,
                   }}
                 />{" "}
                 {this.props.attorneyAtLawTitle}
@@ -363,13 +392,13 @@ class ContactForm extends Component {
               >
                 {this.props.attorneyAtLawEmail}
               </a>
-              <Title
-                color="#333"
-                padding="30px 0 10px 0"
-                textalign="left"
-                fontsize="1.3rem"
-              >
-                <FaUser style={{ verticalAlign: "top", color: "blue" }} />{" "}
+              <Title padding="30px 0 10px 0" textalign="left" fontsize="1.3rem">
+                <FaUser
+                  style={{
+                    verticalAlign: "top",
+                    color: this.props.theme.colors.primaryText,
+                  }}
+                />{" "}
                 {this.props.publicRelationsCoordinatorTitle}
               </Title>
               <Subtitle fontsize="1.7rem" textalign="left">
@@ -384,13 +413,13 @@ class ContactForm extends Component {
               >
                 {this.props.publicRelationsCoordinatorEmail}
               </a>
-              <Title
-                color="#333"
-                padding="30px 0 10px 0"
-                textalign="left"
-                fontsize="1.3rem"
-              >
-                <FaUser style={{ verticalAlign: "top", color: "blue" }} />{" "}
+              <Title padding="30px 0 10px 0" textalign="left" fontsize="1.3rem">
+                <FaUser
+                  style={{
+                    verticalAlign: "top",
+                    color: this.props.theme.colors.primaryText,
+                  }}
+                />{" "}
                 {this.props.companyRepresentativeTitle}
               </Title>
               <Subtitle fontsize="1.7rem" textalign="left">
@@ -405,14 +434,12 @@ class ContactForm extends Component {
               >
                 {this.props.companyRepresentativeEmail}
               </a>
-              <Title
-                color="#333"
-                padding="50px 0 10px 0"
-                textalign="left"
-                fontsize="1.3rem"
-              >
+              <Title padding="50px 0 10px 0" textalign="left" fontsize="1.3rem">
                 <FaEnvelopeOpen
-                  style={{ verticalAlign: "top", color: "blue" }}
+                  style={{
+                    verticalAlign: "top",
+                    color: this.props.theme.colors.primaryText,
+                  }}
                 />{" "}
                 {this.props.mailingTitle}
               </Title>
@@ -427,17 +454,12 @@ class ContactForm extends Component {
           <Column justifycontent="flex-start" minwidth="360px" maxwidth="360px">
             <div>
               <Role>Brazil</Role>
-              <Title
-                color="#333"
-                padding="0 0 10px 0"
-                textalign="left"
-                fontsize="1.3rem"
-              >
+              <Title padding="0 0 10px 0" textalign="left" fontsize="1.3rem">
                 <FaUser
                   style={{
                     fontsize: "1.3rem",
                     verticalalign: "top",
-                    color: "blue"
+                    color: this.props.theme.colors.primaryText,
                   }}
                 />{" "}
                 {this.props.seniorProcessEngineerTitle}
@@ -455,13 +477,13 @@ class ContactForm extends Component {
                 {this.props.seniorProcessEngineerEmail}
               </a>
               <Role padding="60px 0 20px 0">South Korea</Role>
-              <Title
-                color="#333"
-                padding="0 0 10px 0"
-                textalign="left"
-                fontsize="1.3rem"
-              >
-                <FaUser style={{ verticalAlign: "top", color: "blue" }} />{" "}
+              <Title padding="0 0 10px 0" textalign="left" fontsize="1.3rem">
+                <FaUser
+                  style={{
+                    verticalAlign: "top",
+                    color: this.props.theme.colors.primaryText,
+                  }}
+                />{" "}
                 {this.props.companyRepresentative2Title}
               </Title>
               <Subtitle fontsize="1.7rem" textalign="left">
@@ -483,74 +505,92 @@ class ContactForm extends Component {
           <Column />
         </Row>
         <Row>
-          <Column>
-            <Role
-              color="#273e63"
-              fontsize="2.5rem"
-              padding="0"
-              textalign="left"
-            >
+          <Column maxwidth="1024px">
+            <Role fontsize="2.5rem" padding="0" textalign="left">
               Request Information
             </Role>
-            <Box>
-              <Label textalign="left" fontsize="1.5rem">
-                Name
-              </Label>
-              <InputLine
-                textalign="left"
-                onChange={this.onChange}
-                value={this.state.name}
-                type="text"
-                name="name"
-              />
-            </Box>
-            <Box>
-              <Label textalign="left" fontsize="1.5rem">
-                Email
-              </Label>
-              <InputLine
-                textalign="left"
-                onChange={this.onChange}
-                value={this.state.email}
-                type="text"
-                name="email"
-              />
-            </Box>
-            <Box alignitems="flex-start">
-              <Label textalign="left" fontsize="1.5rem">
-                Phone
-              </Label>
-              <Phone>
-                <Select
-                  clearable={false}
-                  name="country"
-                  autosize={true}
-                  placeholder="country name"
-                  value={this.state.country}
-                  onChange={this.onSelect2}
-                  options={CallingCodes}
-                  labelKey="country"
-                  valueKey="value"
-                  valueRenderer={country => country.value}
-                />
+            <Box
+              alignitems="unset"
+              justifycontent="space-between"
+              flexdirection768="row"
+              width="100%"
+            >
+              <Box width768="45%" justifycontent="flex-start" margin="0">
+                <Label textalign="left" fontsize="1.5rem">
+                  Name
+                </Label>
                 <InputLine
                   textalign="left"
                   onChange={this.onChange}
-                  value={this.state.number}
+                  value={this.state.name}
                   type="text"
-                  name="number"
+                  name="name"
+                  required
                 />
-              </Phone>
-              <div
-                className="message"
-                style={{
-                  color: this.state.color
-                }}
+              </Box>
+              <Box
+                width768="45%"
+                alignitems="unset"
+                justifycontent="flex-start"
+                margin="0"
               >
-                {this.state.message}
-              </div>
+                <Label textalign="left" fontsize="1.5rem">
+                  Email
+                </Label>
+                <InputLine
+                  textalign="left"
+                  onChange={this.onChange}
+                  value={this.state.email}
+                  type="email"
+                  name="email"
+                  required
+                />
+              </Box>
             </Box>
-            <Box>
+            <Box
+              alignitems="unset"
+              justifycontent="space-between"
+              flexdirection768="row"
+              width="100%"
+            >
+              <Box alignitems="flex-start" width="100%">
+                <Label textalign="left" fontsize="1.5rem">
+                  Phone
+                </Label>
+                <Phone>
+                  <Select
+                    styles={customStyles}
+                    clearable={false}
+                    name="country"
+                    // autosize={true}
+                    placeholder="country"
+                    value={this.state.country}
+                    onChange={this.onSelect2}
+                    options={CallingCodes}
+                    getOptionLabel={({ country }) => country}
+                    getOptionValue={({ value }) => value}
+                    // valueRenderer={(country) => country.value}
+                  />
+                  <InputLine
+                    width="50%"
+                    textalign="left"
+                    onChange={this.onChange}
+                    value={this.state.number}
+                    type="text"
+                    name="number"
+                  />
+                </Phone>
+                <div
+                  className="message"
+                  style={{
+                    color: this.state.color,
+                  }}
+                >
+                  {this.state.message}
+                </div>
+              </Box>
+            </Box>
+            <Box alignitems="unset" flexdirection768="column" width="100%">
               <Label textalign="left" fontsize="1.5rem">
                 Subject{" "}
               </Label>
@@ -560,6 +600,7 @@ class ContactForm extends Component {
                 value={this.state.subject}
                 type="text"
                 name="subject"
+                required
               />
             </Box>
             <Box alignitems="flex-start" margin="0 0 100px 0">
@@ -574,12 +615,12 @@ class ContactForm extends Component {
                 value={this.state.letter}
                 type="text"
                 name="letter"
+                required
               />
               <Button
                 alignself="flex-end"
                 bottom="-60px"
                 right="-6px"
-                color="black"
                 margin="80px 0 0 0"
                 width="100px"
               >
