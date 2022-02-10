@@ -55,6 +55,6 @@
     "@types/styled-components": "^5.0.1",
     "babel-plugin-styled-components": "^1.10.7",
     "gh-pages": "^2.2.0",
-    "node-sass": "^4.13.1"
+    "node-sass": "^7.0.0"
   }
 }
